@@ -25,7 +25,7 @@
 <meta name="author" content="Derek L. Sonderegger">
 
 
-<meta name="date" content="2018-01-17">
+<meta name="date" content="2018-01-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -162,6 +162,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="A" data-path="A-gamma-function.html"><a href="A-gamma-function.html"><i class="fa fa-check"></i><b>A</b> Gamma Function</a></li>
 <li class="chapter" data-level="B" data-path="B-useful-series-results.html"><a href="B-useful-series-results.html"><i class="fa fa-check"></i><b>B</b> Useful Series Results</a><ul>
 <li class="chapter" data-level="B.1" data-path="B-useful-series-results.html"><a href="B-useful-series-results.html#ex"><i class="fa fa-check"></i><b>B.1</b> <span class="math inline">\(e^x\)</span></a></li>
+<li class="chapter" data-level="B.2" data-path="B-useful-series-results.html"><a href="B-useful-series-results.html#geometric-series"><i class="fa fa-check"></i><b>B.2</b> Geometric Series</a></li>
 </ul></li>
 <li class="chapter" data-level="C" data-path="C-tedious-results.html"><a href="C-tedious-results.html"><i class="fa fa-check"></i><b>C</b> Tedious results</a><ul>
 <li class="chapter" data-level="C.1" data-path="C-tedious-results.html"><a href="C-tedious-results.html#normal-distribution"><i class="fa fa-check"></i><b>C.1</b> Normal distribution</a></li>
@@ -196,6 +197,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span id="def:unnamed-chunk-23" class="definition"><strong>Definition 5.1  </strong></span>Define a Bernoulli random variable as a variable that takes on the value 0 with probability <span class="math inline">\(1-p\)</span> and the value 1 with probability <span class="math inline">\(p\)</span> where <span class="math inline">\(0\le p \le 1\)</span>. We will write this as <span class="math inline">\(X\sim Bernoulli( p )\)</span>.
 </div>
 <p> The pf of a Bernoulli random variable is written as <span class="math display">\[f(x) = p^x (1-p)^{1-x} \;\; \cdot I(x \in \{0,1\})\]</span></p>
+<p>One convenient place for calculating probabilities is a Web App created by Chester Ismay: <a href="https://ismay.shinyapps.io/ProbApp/" class="uri">https://ismay.shinyapps.io/ProbApp/</a></p>
+<p>Alternatively you could use Mathematica, Wolfram Alpha, or R. In a pinch, you could resort to the tables in the back of your book, but I wouldn’t recommend that.</p>
 <ol style="list-style-type: decimal">
 <li>Show that if <span class="math inline">\(X\sim Bernoulli(p)\)</span> then
 <ol style="list-style-type: lower-alpha">
@@ -216,6 +219,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>The variance of <span class="math inline">\(X\)</span> is <span class="math inline">\(Var(X) = np(1-p)\)</span></li>
 <li>The moment generating function of <span class="math inline">\(X\)</span> is <span class="math inline">\(\left( pe^t + (1-p) \right)^n\)</span></li>
 </ol></li>
+<li><p>Suppose that a fair coin (<span class="math inline">\(p=0.5\)</span>) is tossed independently four times. What is the probability that the number of heads is greater than the number of tails? What if we tossed the coin ten times?</p></li>
+<li><p>Suppose that we have an airplane that seats 200 passengers. Through long experience we know that approximately 1% of customers don’t show up to their flight, So to maximize our profit, we might sell 202 tickets and if 2 people don’t show up, then we make more money. Given that we have sold 202 tickets, what is the probability that everybody who shows up for the flight has a seat?</p></li>
+<li><p>My two children are throwing toys into a toy chest. Elise has three toys and each has probability of <span class="math inline">\(2/3\)</span> of going into the chest. Casey has four toys to throw but his probability is only <span class="math inline">\(1/3\)</span>. What is the expected number of toys to make it into the chest?</p></li>
 </ol>
 </div>
 <div id="hypergeometric" class="section level2">
@@ -241,6 +247,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ol style="list-style-type: lower-alpha">
 <li>What is the probability that I select <strong>only</strong> M&amp;Ms when I select 6 pieces of candy?</li>
 <li>What is the expected number of M&amp;Ms in the next 6 pieces (from the 50)?</li>
+<li>What kind of monster am I raising?</li>
 </ol></li>
 </ol>
 </div>
@@ -255,7 +262,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>The variance of <span class="math inline">\(X\)</span> is <span class="math inline">\(Var(X)=\lambda\)</span>. <em>Hint, derive <span class="math inline">\(E[ X(X-1) ]\)</span> and use that to figure out <span class="math inline">\(E[X^2]\)</span>.</em></li>
 <li>The moment generating function of <span class="math inline">\(X\)</span> is <span class="math display">\[\psi(t)=e^{\lambda(e^t-1)}\]</span></li>
 </ol></li>
-<li>Show that if <span class="math inline">\(X_1,\dots,X_n\)</span> are independent and identically distributed <span class="math inline">\(Poisson(\lambda)\)</span> random variables, which we denote as <span class="math display">\[X_i \stackrel{iid}{\sim} Poisson(\lambda)\]</span> then <span class="math display">\[Y=\sum(X_i) \sim Poisson(n\lambda).\]</span></li>
+<li><p>Show that if <span class="math inline">\(X_1,\dots,X_n\)</span> are independent and identically distributed <span class="math inline">\(Poisson(\lambda)\)</span> random variables, which we denote as <span class="math display">\[X_i \stackrel{iid}{\sim} Poisson(\lambda)\]</span> then <span class="math display">\[Y=\sum(X_i) \sim Poisson(n\lambda).\]</span></p></li>
+<li>While driving along the interstate, the number of cars that pass us is reasonably approximated by a Poisson process with rate parmeter <span class="math inline">\(\lambda=0.3\)</span> cars per minute.
+<ol style="list-style-type: lower-alpha">
+<li>What is the rate parameter if we wanted it in cars per hour?</li>
+<li>What is the probability that in a 5 minute stretch of time, that 2 cars pass us?</li>
+<li>What is the probability that 4 or more cars pass us?</li>
+</ol></li>
+<li>Suppose that the number of items produced by a machine follows a Poisson distribution with mean <span class="math inline">\(\lambda\)</span>. Each of those items independently has a probability of being defective of <span class="math inline">\(p\)</span>. We are interested in the marginal distribution the total number defective items produced. Let <span class="math inline">\(Y\)</span> be the number of defective items, <span class="math inline">\(N\)</span> be the number of items produced, and <span class="math inline">\(X_i\)</span> be whether the <span class="math inline">\(i\)</span>th item produced is defective.
+<ol style="list-style-type: lower-alpha">
+<li>What is the distribution of <span class="math inline">\(X_i\)</span>? What is the distribution of <span class="math inline">\(N\)</span>? What is the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(N\)</span>?</li>
+<li>What is the joint distribution of <span class="math inline">\(Y\)</span> and <span class="math inline">\(N\)</span>?</li>
+<li>By summing out <span class="math inline">\(N\)</span>, what is the marginal distribution of <span class="math inline">\(Y\)</span>? <em>Hint: Notice that <span class="math inline">\(Y\le N\)</span></em>.</li>
+</ol></li>
 </ol>
 </div>
 <div id="geometric-and-negative-binomial" class="section level2">

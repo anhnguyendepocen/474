@@ -11,6 +11,11 @@ Define a Bernoulli random variable as a variable that takes on the value 0 with 
 The pf of a Bernoulli random variable is written as
 $$f(x) = p^x (1-p)^{1-x} \;\; \cdot I(x \in \{0,1\})$$
 
+One convenient place for calculating probabilities is a Web App created by Chester Ismay: https://ismay.shinyapps.io/ProbApp/
+
+Alternatively you could use Mathematica, Wolfram Alpha, or R.  In a pinch, you could resort to the tables in the back of your book, but I wouldn't recommend that.
+
+
 1. Show that if $X\sim Bernoulli(p)$ then
     a) The expectation of $X$ is $E(X) = p$
     b) The variance of $X$ is $Var(X) = p(1-p)$
@@ -26,6 +31,12 @@ $$f(x)= {n \choose x}p^x (1-p)^{n-x} \;\;\cdot I(x\in \{0,1,2,\dots,n\})$$
     a) The expectation of $X$ is $E(X) = np$
     b) The variance of $X$ is $Var(X) = np(1-p)$
     c) The moment generating function of $X$ is $\left( pe^t + (1-p) \right)^n$
+    
+3. Suppose that a fair coin ($p=0.5$) is tossed independently four times. What is the probability that the number of heads is greater than the number of tails?  What if we tossed the coin ten times?
+
+4. Suppose that we have an airplane that seats 200 passengers. Through long experience we know that approximately 1% of customers don't show up to their flight, So to maximize our profit, we might sell 202 tickets and if 2 people don't show up, then we make more money.  Given that we have sold 202 tickets, what is the probability that everybody who shows up for the flight has a seat?
+
+5. My two children are throwing toys into a toy chest. Elise has three toys and each has probability of $2/3$ of going into the chest. Casey has four toys to throw but his probability is only $1/3$. What is the expected number of toys to make it into the chest?
 
 ## Hypergeometric
 
@@ -53,6 +64,7 @@ $$Y=\sum_{i=1}^n X_i$$
 5. My daughter recently mixed $20$ M&Ms and $30$ Skittles in a bowl and left them for me to find. 
     a) What is the probability that I select **only** M&Ms when I select 6 pieces of candy? 
     b) What is the expected number of M&Ms in the next 6 pieces (from the 50)?
+    c) What kind of monster am I raising?
 
 
 ## Poisson
@@ -69,6 +81,17 @@ where the parameter $\lambda$ represents the mean number of events that should h
 2. Show that if $X_1,\dots,X_n$ are independent and identically distributed $Poisson(\lambda)$ random variables, which we denote as
 $$X_i \stackrel{iid}{\sim} Poisson(\lambda)$$ 
 then $$Y=\sum(X_i) \sim Poisson(n\lambda).$$
+
+3. While driving along the interstate, the number of cars that pass us is reasonably approximated by a Poisson process with rate parmeter $\lambda=0.3$ cars per minute.
+    a) What is the rate parameter if we wanted it in cars per hour?
+    b) What is the probability that in a 5 minute stretch of time, that 2 cars pass us?
+    c) What is the probability that 4 or more cars pass us?
+
+4. Suppose that the number of items produced by a machine follows a Poisson distribution with mean $\lambda$. Each of those items independently has a probability of being defective of $p$. We are interested in the marginal distribution the total number defective items produced. Let $Y$ be the number of defective items, $N$ be the number of items produced, and $X_i$ be whether the $i$th item produced is defective.
+    a) What is the distribution of $X_i$? What is the distribution of $N$? What is the conditional distribution of $Y$ given $N$?
+    b) What is the joint distribution of $Y$ and $N$?
+    c) By summing out $N$, what is the marginal distribution of $Y$? _Hint: Notice that $Y\le N$_.
+    
 
 
 ## Geometric and Negative Binomial

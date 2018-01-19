@@ -25,7 +25,7 @@
 <meta name="author" content="Derek L. Sonderegger">
 
 
-<meta name="date" content="2018-01-17">
+<meta name="date" content="2018-01-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -162,6 +162,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="A" data-path="A-gamma-function.html"><a href="A-gamma-function.html"><i class="fa fa-check"></i><b>A</b> Gamma Function</a></li>
 <li class="chapter" data-level="B" data-path="B-useful-series-results.html"><a href="B-useful-series-results.html"><i class="fa fa-check"></i><b>B</b> Useful Series Results</a><ul>
 <li class="chapter" data-level="B.1" data-path="B-useful-series-results.html"><a href="B-useful-series-results.html#ex"><i class="fa fa-check"></i><b>B.1</b> <span class="math inline">\(e^x\)</span></a></li>
+<li class="chapter" data-level="B.2" data-path="B-useful-series-results.html"><a href="B-useful-series-results.html#geometric-series"><i class="fa fa-check"></i><b>B.2</b> Geometric Series</a></li>
 </ul></li>
 <li class="chapter" data-level="C" data-path="C-tedious-results.html"><a href="C-tedious-results.html"><i class="fa fa-check"></i><b>C</b> Tedious results</a><ul>
 <li class="chapter" data-level="C.1" data-path="C-tedious-results.html"><a href="C-tedious-results.html#normal-distribution"><i class="fa fa-check"></i><b>C.1</b> Normal distribution</a></li>
@@ -188,7 +189,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="ex" class="section level2">
 <h2><span class="header-section-number">B.1</span> <span class="math inline">\(e^x\)</span></h2>
 <p>In many calculus books, the following is shown (for any <span class="math inline">\(x\)</span>): <span class="math display">\[e^x = \sum_{i=0}^\infty \frac{x^i}{i!}\]</span></p>
-<p>Another series result for <span class="math inline">\(e^x\)</span> is <span class="math display">\[e^x = \lim_{n \to \infty} \left( 1 + \frac{x_n}{n} \right)^n  \;\;\;\;\; \textrm{ if } \;\; x_n \to x\]</span> ## Geometric Series The geometric series result is that <span class="math display">\[\sum_{x=0}^\infty \alpha^x = \frac{1}{1-\alpha}\;\;\;\; \textrm{ if } \;\;\;\vert\alpha\vert&lt;1\]</span></p>
+<p>Another series result for <span class="math inline">\(e^x\)</span> is <span class="math display">\[e^x = \lim_{n \to \infty} \left( 1 + \frac{x_n}{n} \right)^n  \;\;\;\;\; \textrm{ if } \;\; x_n \to x\]</span></p>
+</div>
+<div id="geometric-series" class="section level2">
+<h2><span class="header-section-number">B.2</span> Geometric Series</h2>
+<p>The geometric series result is that <span class="math display">\[\sum_{x=0}^\infty \alpha^x = \frac{1}{1-\alpha}\;\;\;\; \textrm{ if } \;\;\;\vert\alpha\vert&lt;1\]</span></p>
 <p>By repeatedly differentiating both sides we can derive <span class="math display">\[\sum_{x=1}^\infty x \alpha ^{x-1} = \frac{1}{ (1-\alpha)^2 }\;\;\;\; \textrm{ if } \;\;\;\vert\alpha\vert&lt;1\]</span> and <span class="math display">\[\sum_{x=2}^\infty x(x-1) \alpha^{x-2} = \frac{2}{(1-\alpha)^3}\;\;\;\; \textrm{ if } \;\;\;\vert\alpha\vert&lt;1\]</span></p>
 </div>
 </div>

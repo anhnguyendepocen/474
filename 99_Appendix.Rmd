@@ -74,7 +74,10 @@ $$e^x = \sum_{i=0}^\infty \frac{x^i}{i!}$$
 
 Another series result for $e^x$ is 
 $$e^x = \lim_{n \to \infty} \left( 1 + \frac{x_n}{n} \right)^n  \;\;\;\;\; \textrm{ if } \;\; x_n \to x$$
+
+
 ## Geometric Series
+
 The geometric series result is that 
 $$\sum_{x=0}^\infty \alpha^x = \frac{1}{1-\alpha}\;\;\;\; \textrm{ if } \;\;\;\vert\alpha\vert<1$$
 
@@ -82,6 +85,7 @@ By repeatedly differentiating both sides we can derive
 $$\sum_{x=1}^\infty x \alpha ^{x-1} = \frac{1}{ (1-\alpha)^2 }\;\;\;\; \textrm{ if } \;\;\;\vert\alpha\vert<1$$
 and
 $$\sum_{x=2}^\infty x(x-1) \alpha^{x-2} = \frac{2}{(1-\alpha)^3}\;\;\;\; \textrm{ if } \;\;\;\vert\alpha\vert<1$$
+
 
 # Tedious results
 
