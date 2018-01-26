@@ -52,19 +52,21 @@ $$Y=\sum_{i=1}^n X_i$$
 
 3. Because $X_i$ is negatively correlated with $X_j$, we can't easily derive the variance of $Y$.  Instead we will be *obnoxiously* clever.
     a) Let $n=A+B$ so that we are selecting all the balls. Argue that $Var(Y) = 0$.
-    b) Because of the symmetry of the random assignments of balls, then $Cov(X_i,X_j)$ is the same for all $i\ne j$. _There isn't anything thing to do here, but this part of our arguement is critical._
+    b) Again with $n=A+B$, notice that because of the symmetry of the random assignments of balls, then $Cov(X_i,X_j)$ is the same for all $i\ne j$. _There isn't anything thing to do here, but this part of our arguement is critical._
     c) We know that for any set of random variables
         $$Var(Y) = \sum_{i=1}^n Var(X_i) + \sum_{i \ne j} Cov(X_i,X_j)$$
-        Use this information, along with parts (a) and (b), to solve for the $Cov(X_i, X_j)$.  _The hard part here is figuring out how many covariance terms there are._
-    d) Finally, show that 
+        Use this information, along with parts (a) and (b), to solve for the $Cov(X_i, X_j)$ in terms of just $A$ and $B$ under the $n=A+B$ condition.  _The hard part here is figuring out how many covariance terms there are. Because this result is just a statement about two draws, then just as in problem 2, it doesn't matter how many balls are drawn. This step gives us the covariance between $X_i$ and $X_j$ regardless of the number draws._ 
+    d) Finally, letting $n$ be an arbitrary integer between $0$ and $A+B$, and the $Cov(X_i, X_j)$ calculated above, show that 
     $$Var(Y) = \frac{nAB}{(A+B)^2}\cdot \frac{A+B-n}{A+B-1}$$
-    
-4. Suppose that we have $Y \sim Hypergeometric(A,B,n)$ and separately we have $W \sim Bernoulli \Big( n, \frac{A}{A+B} \Big)$. Show that for $n > 1$ that $Var(W) > Var(Y)$.
 
-5. My daughter recently mixed $20$ M&Ms and $30$ Skittles in a bowl and left them for me to find. 
+4. My daughter recently mixed $20$ M&Ms and $30$ Skittles in a bowl and left them for me to find. 
     a) What is the probability that I select **only** M&Ms when I select 6 pieces of candy? 
     b) What is the expected number of M&Ms in the next 6 pieces (from the 50)?
     c) What kind of monster am I raising?
+
+```{r, eval=FALSE, echo=FALSE}
+4. Suppose that we have $Y \sim Hypergeometric(A,B,n)$ and separately we have $W \sim Bernoulli \Big( n, \frac{A}{A+B} \Big)$. Show that for $n > 1$ that $Var(W) > Var(Y)$.
+```
 
 
 ## Poisson
@@ -97,26 +99,32 @@ then $$Y=\sum(X_i) \sim Poisson(n\lambda).$$
 ## Geometric and Negative Binomial
 We will first define the _geometric_ distribution. Here we consider another version of multiple Bernoulli random variables. This time, we consider an experiment where we repeatedly sample from a $Bernoulli(p)$ distribution, where $p$ is the probability the draw was a success, and each draw is independent of all previous draws. We are interested in _"the number of failures before the first success."_ 
 
-1.  We first consider $Y \sim Geometric(p)$.
-    a) What is the probability that there are no failures?  That is, what is the probability that the first success occurs on the first draw. 
-        $$f(0) = Pr( Y = 0 ) = \;\;?$$
-    b) What is the probability that there is one failure followed by a success?  What is the probability that there are $y$ failures before the first success?
-    c) Use this to derive the pf of a $Geometric(p)$ distribution.
-    
-2.  Show that the Moment Generating Function for the $Geometric(p)$ distribution is
+1.  Show that the Moment Generating Function for the $Geometric(p)$ distribution is
     $$\psi(t) = \frac{p}{1-(1-p)e^t}$$
     _Hint, the Geometric distribution is named as such because the Geometric Series result is necessary to show this._ 
 
-3.  Utilize the mfg to derive the expected value and variance of a $Geometric(p)$ distribution.
+2.  Utilize the mfg to derive the expected value and variance of a $Geometric(p)$ distribution.
 
 The Negative Binomial distribution extends the idea of "number of failures until the first success" to the number of failures until the $r$th success. 
 
-4. The pf of the $Y \sim Negative \;Binomial(r,p)$ distribution can be derived with the following:
+3. The pf of the $Y \sim Negative \;Binomial(r,p)$ distribution can be derived with the following:
     a) What is the probability of observing exactly $y$ failures in a row, followed by $r$ successes?
     b) How many ways are there to distribute the $r$ successes among the $r+y$ draws, keeping in mind that the final draw must be a success?
     c) Use the above ideas to derive the pf.
     
-5.  A second way of thinking about the negative binomial distribution is as the sum of $r$ independent Geometric random variables.  Utilize this interpretation to derive the expectation, variance, and moment generating function of a $Negative \;Binomial(r,p)$ distribution.
+4.  A second way of thinking about the negative binomial distribution is as the sum of $r$ independent Geometric random variables.  Utilize this interpretation to derive the expectation, variance, and moment generating function of a $Negative \;Binomial(r,p)$ distribution.
+
+5. Suppose that we have a Negative Binomial distribution with expectation $\mu$ and variance $\sigma^2$. What must the $r$ and $p$ be? _Notice this is just allows for an alternate paramterization of the distribution in terms of the mean and variance._
+
+6. In the game _Pass the Pigs_, the probability of a Snouter is approximately 4%. 
+    a) What is the expected number of failures before I roll my fourth Snouter?
+    b) What is the variance of the number of failures before I roll my fourth Snouter?
+    
+7. Suppose that $X\sim Geometric(p)$. What is the probability that $X \in \{0,2,4,\dots\}$? _Hint: Let w=2x_.
+
+8. Show that if $X \sim Geometric(p)$ that $Pr( X \ge k ) = (1-p)^k$ for $k \in \{0,1,2,\dots\}$. _
+
+9. **The Memoryless Property of the Geometric Distribution** Let $X\sim Geometric(p)$. Show that if it is known that $X\ge k$ for $k \in \{0,1,2,\dots\}$, then $Pr( X = k+t \;|\; X \ge k) = Pr( X =t )$
 
 _Some books parameterize the geometric (and negative binomial) distributions as the total number of draws before the first (or $n$th) success. Whenever you are looking up properties of this distribution, make sure it is defined how you want it.  For example, the wikipedia page for the geometric (and negative binomial) have the information for both definitions._
 

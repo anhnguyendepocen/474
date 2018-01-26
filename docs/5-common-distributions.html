@@ -25,7 +25,7 @@
 <meta name="author" content="Derek L. Sonderegger">
 
 
-<meta name="date" content="2018-01-19">
+<meta name="date" content="2018-01-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -238,11 +238,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Because <span class="math inline">\(X_i\)</span> is negatively correlated with <span class="math inline">\(X_j\)</span>, we can’t easily derive the variance of <span class="math inline">\(Y\)</span>. Instead we will be <em>obnoxiously</em> clever.
 <ol style="list-style-type: lower-alpha">
 <li>Let <span class="math inline">\(n=A+B\)</span> so that we are selecting all the balls. Argue that <span class="math inline">\(Var(Y) = 0\)</span>.</li>
-<li>Because of the symmetry of the random assignments of balls, then <span class="math inline">\(Cov(X_i,X_j)\)</span> is the same for all <span class="math inline">\(i\ne j\)</span>. <em>There isn’t anything thing to do here, but this part of our arguement is critical.</em></li>
-<li>We know that for any set of random variables <span class="math display">\[Var(Y) = \sum_{i=1}^n Var(X_i) + \sum_{i \ne j} Cov(X_i,X_j)\]</span> Use this information, along with parts (a) and (b), to solve for the <span class="math inline">\(Cov(X_i, X_j)\)</span>. <em>The hard part here is figuring out how many covariance terms there are.</em></li>
-<li>Finally, show that <span class="math display">\[Var(Y) = \frac{nAB}{(A+B)^2}\cdot \frac{A+B-n}{A+B-1}\]</span></li>
+<li>Again with <span class="math inline">\(n=A+B\)</span>, notice that because of the symmetry of the random assignments of balls, then <span class="math inline">\(Cov(X_i,X_j)\)</span> is the same for all <span class="math inline">\(i\ne j\)</span>. <em>There isn’t anything thing to do here, but this part of our arguement is critical.</em></li>
+<li>We know that for any set of random variables <span class="math display">\[Var(Y) = \sum_{i=1}^n Var(X_i) + \sum_{i \ne j} Cov(X_i,X_j)\]</span> Use this information, along with parts (a) and (b), to solve for the <span class="math inline">\(Cov(X_i, X_j)\)</span> in terms of just <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> under the <span class="math inline">\(n=A+B\)</span> condition. <em>The hard part here is figuring out how many covariance terms there are. Because this result is just a statement about two draws, then just as in problem 2, it doesn’t matter how many balls are drawn. This step gives us the covariance between <span class="math inline">\(X_i\)</span> and <span class="math inline">\(X_j\)</span> regardless of the number draws.</em></li>
+<li>Finally, letting <span class="math inline">\(n\)</span> be an arbitrary integer between <span class="math inline">\(0\)</span> and <span class="math inline">\(A+B\)</span>, and the <span class="math inline">\(Cov(X_i, X_j)\)</span> calculated above, show that <span class="math display">\[Var(Y) = \frac{nAB}{(A+B)^2}\cdot \frac{A+B-n}{A+B-1}\]</span></li>
 </ol></li>
-<li><p>Suppose that we have <span class="math inline">\(Y \sim Hypergeometric(A,B,n)\)</span> and separately we have <span class="math inline">\(W \sim Bernoulli \Big( n, \frac{A}{A+B} \Big)\)</span>. Show that for <span class="math inline">\(n &gt; 1\)</span> that <span class="math inline">\(Var(W) &gt; Var(Y)\)</span>.</p></li>
 <li>My daughter recently mixed <span class="math inline">\(20\)</span> M&amp;Ms and <span class="math inline">\(30\)</span> Skittles in a bowl and left them for me to find.
 <ol style="list-style-type: lower-alpha">
 <li>What is the probability that I select <strong>only</strong> M&amp;Ms when I select 6 pieces of candy?</li>
@@ -281,24 +280,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">5.5</span> Geometric and Negative Binomial</h2>
 <p>We will first define the <em>geometric</em> distribution. Here we consider another version of multiple Bernoulli random variables. This time, we consider an experiment where we repeatedly sample from a <span class="math inline">\(Bernoulli(p)\)</span> distribution, where <span class="math inline">\(p\)</span> is the probability the draw was a success, and each draw is independent of all previous draws. We are interested in <em>“the number of failures before the first success.”</em></p>
 <ol style="list-style-type: decimal">
-<li>We first consider <span class="math inline">\(Y \sim Geometric(p)\)</span>.
-<ol style="list-style-type: lower-alpha">
-<li>What is the probability that there are no failures? That is, what is the probability that the first success occurs on the first draw. <span class="math display">\[f(0) = Pr( Y = 0 ) = \;\;?\]</span></li>
-<li>What is the probability that there is one failure followed by a success? What is the probability that there are <span class="math inline">\(y\)</span> failures before the first success?</li>
-<li>Use this to derive the pf of a <span class="math inline">\(Geometric(p)\)</span> distribution.</li>
-</ol></li>
 <li><p>Show that the Moment Generating Function for the <span class="math inline">\(Geometric(p)\)</span> distribution is <span class="math display">\[\psi(t) = \frac{p}{1-(1-p)e^t}\]</span> <em>Hint, the Geometric distribution is named as such because the Geometric Series result is necessary to show this.</em></p></li>
 <li><p>Utilize the mfg to derive the expected value and variance of a <span class="math inline">\(Geometric(p)\)</span> distribution.</p></li>
 </ol>
 <p>The Negative Binomial distribution extends the idea of “number of failures until the first success” to the number of failures until the <span class="math inline">\(r\)</span>th success.</p>
-<ol start="4" style="list-style-type: decimal">
+<ol start="3" style="list-style-type: decimal">
 <li>The pf of the <span class="math inline">\(Y \sim Negative \;Binomial(r,p)\)</span> distribution can be derived with the following:
 <ol style="list-style-type: lower-alpha">
 <li>What is the probability of observing exactly <span class="math inline">\(y\)</span> failures in a row, followed by <span class="math inline">\(r\)</span> successes?</li>
 <li>How many ways are there to distribute the <span class="math inline">\(r\)</span> successes among the <span class="math inline">\(r+y\)</span> draws, keeping in mind that the final draw must be a success?</li>
 <li>Use the above ideas to derive the pf.</li>
 </ol></li>
-<li>A second way of thinking about the negative binomial distribution is as the sum of <span class="math inline">\(r\)</span> independent Geometric random variables. Utilize this interpretation to derive the expectation, variance, and moment generating function of a <span class="math inline">\(Negative \;Binomial(r,p)\)</span> distribution.</li>
+<li><p>A second way of thinking about the negative binomial distribution is as the sum of <span class="math inline">\(r\)</span> independent Geometric random variables. Utilize this interpretation to derive the expectation, variance, and moment generating function of a <span class="math inline">\(Negative \;Binomial(r,p)\)</span> distribution.</p></li>
+<li><p>Suppose that we have a Negative Binomial distribution with expectation <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. What must the <span class="math inline">\(r\)</span> and <span class="math inline">\(p\)</span> be? <em>Notice this is just allows for an alternate paramterization of the distribution in terms of the mean and variance.</em></p></li>
+<li>In the game <em>Pass the Pigs</em>, the probability of a Snouter is approximately 4%.
+<ol style="list-style-type: lower-alpha">
+<li>What is the expected number of failures before I roll my fourth Snouter?</li>
+<li>What is the variance of the number of failures before I roll my fourth Snouter?</li>
+</ol></li>
+<li><p>Suppose that <span class="math inline">\(X\sim Geometric(p)\)</span>. What is the probability that <span class="math inline">\(X \in \{0,2,4,\dots\}\)</span>? <em>Hint: Let w=2x</em>.</p></li>
+<li><p>Show that if <span class="math inline">\(X \sim Geometric(p)\)</span> that <span class="math inline">\(Pr( X \ge k ) = (1-p)^k\)</span> for <span class="math inline">\(k \in \{0,1,2,\dots\}\)</span>. _</p></li>
+<li><p><strong>The Memoryless Property of the Geometric Distribution</strong> Let <span class="math inline">\(X\sim Geometric(p)\)</span>. Show that if it is known that <span class="math inline">\(X\ge k\)</span> for <span class="math inline">\(k \in \{0,1,2,\dots\}\)</span>, then <span class="math inline">\(Pr( X = k+t \;|\; X \ge k) = Pr( X =t )\)</span></p></li>
 </ol>
 <p><em>Some books parameterize the geometric (and negative binomial) distributions as the total number of draws before the first (or <span class="math inline">\(n\)</span>th) success. Whenever you are looking up properties of this distribution, make sure it is defined how you want it. For example, the wikipedia page for the geometric (and negative binomial) have the information for both definitions.</em></p>
 </div>
