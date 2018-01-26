@@ -159,28 +159,21 @@ $$\begin{aligned} \psi(t)
 
 2. Show that if $X \sim N(\mu, \sigma^2)$, then $Var(X) = \sigma^2$.  _Hint, use the mgf._
 
-3. Show that if $X \sim N(\mu, \sigma^2)$, then $Y=aX + b$ has distribution $Y\sim N(a\mu+b, \,a^2 \sigma^2)$. 
+3. Show that if $X \sim N(\mu, \sigma^2)$, then $Y=aX + b$ has distribution $Y\sim N(a\mu+b, \,a^2 \sigma^2)$. In particular, notice that $Z=\frac{X-\mu}{\sigma}$ has a $N(0,1)$ distribution.
 
 4. Show that if $X_i \sim N(\mu_i,\, \sigma^2_i)$ for $i \in \{1,2,\dots,n\}$ where $X_i$ are all independent, then $Y=\sum X_i$ has distribution 
 $Y \sim N\left( \sum \mu_i, \sum \sigma^2_i \right)$
 
-## Uniform
-
-The continuous uniform distribution on the interval $(a,b)$ where $a<b$ has a density function
-$$f(x) = \frac{1}{b-a} \;\cdot I(a < x < b)$$
-1. Show that if $X\sim Unif(a,b)$ then $E(X) = \frac{1}{b-a}$
-
-2. Show that the moment generating function of a $Uniform(a,b)$ distribution is
-$$\psi(t) = \frac{e^{bt} - e^{at}}{t(b-a)}$$
-
-3. Show that if $U \sim Uniform(0,1)$ then $X=(b-a)U + a$ has a $Uniform(a,b)$ distribution.
-
-4. Show that the $Uniform(0,1)$ distribution has expectation $\frac{1}{2}$ and variance $\frac{1}{12}$.  
-
-5. Show that the $Uniform(a,b)$ distribution has expectation $\frac{a+b}{2}$ and variance $\frac{(b-a)^2}{12}$
+5. In STA 270/275 it was claimed that the mean, median, and mode of a $N(\mu,\sigma^2)$ distribution are all $\mu$. We can show this for the $N(0,1)$ case and due to the transformations confirmed in problem three, it will hold for all normal distributions. In the parts below, let $Z\sim N(0,1)$
+    a) Use symmetric to show that the median of the standard normal distribution is 0.
+    b) Show that the peak of the distribution occurs at 0 using the first derivative test. The peak of a distribution is often called the _mode_.
+    c) Using the second deriviative, show that the curve has inflection points at $z=-1$ and $z=1$ where the concavity changes.
+    
 
 ## Exponential and Gamma
 
 ## Beta
+
+## Multinomial
 
 ## Bivariate Normal
