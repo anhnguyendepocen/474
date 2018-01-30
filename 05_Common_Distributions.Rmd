@@ -149,6 +149,10 @@ $$\begin{aligned} \psi(t)
 We then expand the square twice in the exponent by adding and subtracting the term $\mu t + \frac{1}{2}\sigma^2 t^2$ and then re-arranging to find 
 
 $$\begin{aligned} \psi(t) 
+  &= \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}\sigma} \exp \left[ \mu t + \frac{1}{2}\sigma^2 t^2 -\mu t -\frac{1}{2} \sigma^2 t^2 + tx -\frac{(x-\mu)^2}{2\sigma^2}  \right] \,dx\\
+  &= \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}\sigma} \exp \left[ \mu t + \frac{1}{2}\sigma^2 t^2 - \left\{ \mu t +\frac{1}{2} \sigma^2 t^2 - tx +\frac{(x-\mu)^2}{2\sigma^2}  \right\} \right] \,dx\\
+  &= \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}\sigma} \exp \left[ \mu t + \frac{1}{2}\sigma^2 t^2 - \left\{\frac{2\sigma^2 \mu t + \sigma^4 t^2 - 2\sigma^2 tx + x^2 -2x\mu + \mu^2}{2\sigma^2} \right\} \right] \,dx\\
+  &= \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}\sigma} \exp \left[ \mu t + \frac{1}{2}\sigma^2 t^2 - \left\{ \frac{x^2 - 2x(\mu+\sigma^2 t) + (\mu + \sigma^2t)^2}{ 2 \sigma^2} \right\} \right] \,dx\\
   &= \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}\sigma} \exp \left[ \mu t + \frac{1}{2} \sigma^2 t^2 - \frac{\Big(x-(\mu+\sigma^2t)\Big)^2}{2\sigma^2} \right] \,dx\\
   &= \exp \left[ \mu t + \frac{1}{2} \sigma^2 t^2 \right]  \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}\sigma} \exp \left[ - \frac{\Big(x-(\mu+\sigma^2t)\Big)^2}{2\sigma^2} \right] \,dx \\
   &= \exp \left[ \mu t + \frac{1}{2} \sigma^2 t^2 \right]
