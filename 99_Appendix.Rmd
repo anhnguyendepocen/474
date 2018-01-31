@@ -18,8 +18,8 @@ $$\Gamma(x) = \int_0^\infty z^{x-1} e^{-z} \,dz$$
 First we show that $\Gamma(x) = (x-1)\Gamma(x-1)$ utilizing integration by parts.
 
 $$\begin{aligned}  
-u  = z^{x-1}      &\;\;\;  & dv = e^{-z}\,dz \\
-du = (x-1)z^{x-2}\,dx &\;\;\;  & v  = -e^{-z} 
+u  &=& z^{x-1}          &\;\;\;\;\;   & dv &=& e^{-z}\,dz \\
+du &=& (x-1)z^{x-2}\,dx &\;\;\;\;\;   & v  &=& -e^{-z} \\
 \end{aligned}$$
 
 and therefore
@@ -60,7 +60,7 @@ data <- data.frame(x=seq(0,6, by=.005)) %>%
 ggplot(data, aes(x=x, y=y)) +
   geom_line() +
   coord_cartesian(xlim=c(0,5), ylim=c(0,12)) +
-  scale_y_continuous(name=expression(Gamma(x)))
+  scale_y_continuous(name=expression(Gamma(x)), breaks=seq(0,12, by=2))
 ```
 
 Finally we note that there is a reasonable approximation (known as Stirling's approximation) to the function for large values of $x$ as

@@ -25,7 +25,7 @@
 <meta name="author" content="Derek L. Sonderegger">
 
 
-<meta name="date" content="2018-01-30">
+<meta name="date" content="2018-01-31">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -262,7 +262,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>The moment generating function of <span class="math inline">\(X\)</span> is <span class="math display">\[\psi(t)=e^{\lambda(e^t-1)}\]</span></li>
 </ol></li>
 <li><p>Show that if <span class="math inline">\(X_1,\dots,X_n\)</span> are independent and identically distributed <span class="math inline">\(Poisson(\lambda)\)</span> random variables, which we denote as <span class="math display">\[X_i \stackrel{iid}{\sim} Poisson(\lambda)\]</span> then <span class="math display">\[Y=\sum(X_i) \sim Poisson(n\lambda).\]</span></p></li>
-<li>While driving along the interstate, the number of cars that pass us is reasonably approximated by a Poisson process with rate parmeter <span class="math inline">\(\lambda=0.3\)</span> cars per minute.
+<li>While driving along the interstate, the number of cars that pass us is reasonably approximated by a Poisson process with rate parameter <span class="math inline">\(\lambda=0.3\)</span> cars per minute.
 <ol style="list-style-type: lower-alpha">
 <li>What is the rate parameter if we wanted it in cars per hour?</li>
 <li>What is the probability that in a 5 minute stretch of time, that 2 cars pass us?</li>
@@ -333,12 +333,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ol style="list-style-type: lower-alpha">
 <li>Use symmetric to show that the median of the standard normal distribution is 0.</li>
 <li>Show that the peak of the distribution occurs at 0 using the first derivative test. The peak of a distribution is often called the <em>mode</em>.</li>
-<li>Using the second deriviative, show that the curve has inflection points at <span class="math inline">\(z=-1\)</span> and <span class="math inline">\(z=1\)</span> where the concavity changes.</li>
+<li>Using the second derivative, show that the curve has inflection points at <span class="math inline">\(z=-1\)</span> and <span class="math inline">\(z=1\)</span> where the concavity changes.</li>
 </ol></li>
 </ol>
 </div>
 <div id="exponential-and-gamma" class="section level2">
 <h2><span class="header-section-number">5.7</span> Exponential and Gamma</h2>
+<ol style="list-style-type: decimal">
+<li><p>Suppose that <span class="math inline">\(X \sim Gamma(\alpha, \beta)\)</span> and <span class="math inline">\(c\)</span> is a positive constant. Show that <span class="math inline">\(cX\)</span> is distributed <span class="math inline">\(Gamma(\alpha, \beta/c)\)</span>.</p></li>
+<li><p>Find mode (peak of the distribution) for a <span class="math inline">\(Gamma(\alpha, \beta)\)</span> distribution.</p></li>
+<li><p>Suppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} Exp(\beta)\)</span> for <span class="math inline">\(i\in \{1,2,\dots,n\}\)</span>. Find the distribution of the sample mean <span class="math inline">\(\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i\)</span>.</p></li>
+<li><p>Suppose that <span class="math inline">\(X_i \sim Exp(\beta_i)\)</span> are independently distributed for <span class="math inline">\(i\in \{1,2,\dots,n\}\)</span>. Show that the distribution of the sample minimum (<span class="math inline">\(Y = \min\{X_1, X_2, \dots, X_n\}\)</span> is <span class="math inline">\(Exp \left( \sum\beta_i \right)\)</span>.</p></li>
+<li><p>Suppose that an electronic system contains <span class="math inline">\(n\)</span> similar components that function independently of each other and that are connected in series so that the system fails as soon as one of the components fails. Suppose also that the length of life for each component, measured in hours, has the exponential distribution with mean <span class="math inline">\(\mu\)</span>. Determine the mean and the variance of the length of time until the system fails.</p></li>
+</ol>
 </div>
 <div id="beta" class="section level2">
 <h2><span class="header-section-number">5.8</span> Beta</h2>

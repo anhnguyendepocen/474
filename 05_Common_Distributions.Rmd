@@ -84,7 +84,7 @@ where the parameter $\lambda$ represents the mean number of events that should h
 $$X_i \stackrel{iid}{\sim} Poisson(\lambda)$$ 
 then $$Y=\sum(X_i) \sim Poisson(n\lambda).$$
 
-3. While driving along the interstate, the number of cars that pass us is reasonably approximated by a Poisson process with rate parmeter $\lambda=0.3$ cars per minute.
+3. While driving along the interstate, the number of cars that pass us is reasonably approximated by a Poisson process with rate parameter $\lambda=0.3$ cars per minute.
     a) What is the rate parameter if we wanted it in cars per hour?
     b) What is the probability that in a 5 minute stretch of time, that 2 cars pass us?
     c) What is the probability that 4 or more cars pass us?
@@ -171,10 +171,20 @@ $Y \sim N\left( \sum \mu_i, \sum \sigma^2_i \right)$
 5. In STA 270/275 it was claimed that the mean, median, and mode of a $N(\mu,\sigma^2)$ distribution are all $\mu$. We can show this for the $N(0,1)$ case and due to the transformations confirmed in problem three, it will hold for all normal distributions. In the parts below, let $Z\sim N(0,1)$
     a) Use symmetric to show that the median of the standard normal distribution is 0.
     b) Show that the peak of the distribution occurs at 0 using the first derivative test. The peak of a distribution is often called the _mode_.
-    c) Using the second deriviative, show that the curve has inflection points at $z=-1$ and $z=1$ where the concavity changes.
+    c) Using the second derivative, show that the curve has inflection points at $z=-1$ and $z=1$ where the concavity changes.
     
 
 ## Exponential and Gamma
+
+1. Suppose that $X \sim Gamma(\alpha, \beta)$ and $c$ is a positive constant.  Show that $cX$ is distributed $Gamma(\alpha, \beta/c)$.
+
+2. Find mode (peak of the distribution) for a $Gamma(\alpha, \beta)$ distribution.
+
+3. Suppose that $X_i \stackrel{iid}{\sim} Exp(\beta)$ for $i\in \{1,2,\dots,n\}$. Find the distribution of the sample mean $\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i$.
+
+4. Suppose that $X_i \sim Exp(\beta_i)$ are independently distributed for $i\in \{1,2,\dots,n\}$. Show that the distribution of the sample minimum ($Y = \min\{X_1, X_2, \dots, X_n\}$ is $Exp \left( \sum\beta_i \right)$.
+
+5. Suppose that an electronic system contains $n$ similar components that function independently of each other and that are connected in series so that the system fails as soon as one of the components fails.  Suppose also that the length of life for each component, measured in hours, has the exponential distribution with mean $\mu$.  Determine the mean and the variance of the length of time until the system fails.
 
 ## Beta
 
