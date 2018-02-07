@@ -196,7 +196,7 @@ $Y \sim N\left( \sum \mu_i, \sum \sigma^2_i \right)$
 
 2. Suppose that $X \sim Beta(\alpha, \beta)$. Derive the distribution of $Y = 1-X$.
 
-3. Suppose that $X \sim Gamma(\alpha_1, \beta)$ and $Y \sim Gamma(\alpha_2, \beta)$. Define $U=X/(X+Y)$ and $V=X+Y$.
+3. Suppose that $X \sim Gamma(\alpha_1, \beta)$ and $Y \sim Gamma(\alpha_2, \beta)$ and that $X$ and $Y$ are independent. Define $U=X/(X+Y)$ and $V=X+Y$.
     a) Derive the joint distribution of $U$ and $V$. _Hint: This goes back to Section 3.9. Theorem 5.8.4 in this section is also helpful._
     b) Show that $U$ and $V$ are independent.
     c) Show that $U \sim Beta(\alpha_1, \alpha_2)$
