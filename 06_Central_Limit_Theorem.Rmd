@@ -1,0 +1,4 @@
+
+# Large Random Samples
+
+1. State and prove the Central Limit Theorem (Theorem 6.3.1).
