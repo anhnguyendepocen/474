@@ -25,7 +25,7 @@
 <meta name="author" content="Derek L. Sonderegger">
 
 
-<meta name="date" content="2018-02-23">
+<meta name="date" content="2018-02-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -156,10 +156,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.7" data-path="5-common-distributions.html"><a href="5-common-distributions.html#exponential-and-gamma"><i class="fa fa-check"></i><b>5.7</b> Exponential and Gamma</a></li>
 <li class="chapter" data-level="5.8" data-path="5-common-distributions.html"><a href="5-common-distributions.html#beta"><i class="fa fa-check"></i><b>5.8</b> Beta</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html"><i class="fa fa-check"></i><b>6</b> Large Random Samples</a></li>
+<li class="chapter" data-level="6" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html"><i class="fa fa-check"></i><b>6</b> Large Random Samples</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html#law-of-large-numbers"><i class="fa fa-check"></i><b>6.2</b> Law of Large Numbers</a></li>
+<li class="chapter" data-level="6.3" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Central Limit Theorem</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="7-estimation.html"><a href="7-estimation.html"><i class="fa fa-check"></i><b>7</b> Estimation</a><ul>
 <li class="chapter" data-level="7.1" data-path="7-estimation.html"><a href="7-estimation.html#statistical-inference"><i class="fa fa-check"></i><b>7.1</b> Statistical Inference</a></li>
 <li class="chapter" data-level="7.2" data-path="7-estimation.html"><a href="7-estimation.html#prior-and-posterior-distributions"><i class="fa fa-check"></i><b>7.2</b> Prior and Posterior Distributions</a></li>
+<li class="chapter" data-level="7.3" data-path="7-estimation.html"><a href="7-estimation.html#conjugate-prior-distributions"><i class="fa fa-check"></i><b>7.3</b> Conjugate Prior Distributions</a></li>
+<li class="chapter" data-level="7.4" data-path="7-estimation.html"><a href="7-estimation.html#bayes-estimators"><i class="fa fa-check"></i><b>7.4</b> Bayes Estimators</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-gamma-function.html"><a href="A-gamma-function.html"><i class="fa fa-check"></i><b>A</b> Gamma Function</a></li>
@@ -189,10 +195,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="large-random-samples" class="section level1">
 <h1><span class="header-section-number">Chapter 6</span> Large Random Samples</h1>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">6.1</span> Introduction</h2>
+</div>
+<div id="law-of-large-numbers" class="section level2">
+<h2><span class="header-section-number">6.2</span> Law of Large Numbers</h2>
+<ol style="list-style-type: decimal">
+<li><p>It is said that a sequence of random variables <span class="math inline">\(X_i\)</span> converges to the constant <span class="math inline">\(b\)</span> in <em>quadratic mean</em> if <span class="math display">\[\lim_{n\to\infty}E\left[ (X_n-b)^2 \right] = 0\]</span> Show this equality is satisfied if and only if <span class="math display">\[\lim_{n\to\infty} E(X_n) = b \;\;\;\; \textrm{ and } \;\;\;\; \lim_{n\to\infty} Var(X_n)=0\]</span> <em>Hint: <span class="math inline">\(E[ (Y-c)^2 ] = (\mu -c)^2 + \sigma^2)\)</span> where <span class="math inline">\(\mu=E(Y)\)</span> and <span class="math inline">\(\sigma^2 = Var(Y)\)</span>.</em></p></li>
+<li><p>Prove that if a sequence of random variables <span class="math inline">\(Z_n\)</span> converges to a constant <span class="math inline">\(b\)</span> in quadratic mean, then the sequence also converges to <span class="math inline">\(b\)</span> in probability.</p></li>
+</ol>
+</div>
+<div id="central-limit-theorem" class="section level2">
+<h2><span class="header-section-number">6.3</span> Central Limit Theorem</h2>
 <ol style="list-style-type: decimal">
 <li>State and prove the Central Limit Theorem (Theorem 6.3.1).</li>
 </ol>
 
+</div>
 </div>
             </section>
 

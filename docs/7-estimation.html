@@ -25,7 +25,7 @@
 <meta name="author" content="Derek L. Sonderegger">
 
 
-<meta name="date" content="2018-02-23">
+<meta name="date" content="2018-02-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -156,10 +156,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.7" data-path="5-common-distributions.html"><a href="5-common-distributions.html#exponential-and-gamma"><i class="fa fa-check"></i><b>5.7</b> Exponential and Gamma</a></li>
 <li class="chapter" data-level="5.8" data-path="5-common-distributions.html"><a href="5-common-distributions.html#beta"><i class="fa fa-check"></i><b>5.8</b> Beta</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html"><i class="fa fa-check"></i><b>6</b> Large Random Samples</a></li>
+<li class="chapter" data-level="6" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html"><i class="fa fa-check"></i><b>6</b> Large Random Samples</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html#law-of-large-numbers"><i class="fa fa-check"></i><b>6.2</b> Law of Large Numbers</a></li>
+<li class="chapter" data-level="6.3" data-path="6-large-random-samples.html"><a href="6-large-random-samples.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Central Limit Theorem</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="7-estimation.html"><a href="7-estimation.html"><i class="fa fa-check"></i><b>7</b> Estimation</a><ul>
 <li class="chapter" data-level="7.1" data-path="7-estimation.html"><a href="7-estimation.html#statistical-inference"><i class="fa fa-check"></i><b>7.1</b> Statistical Inference</a></li>
 <li class="chapter" data-level="7.2" data-path="7-estimation.html"><a href="7-estimation.html#prior-and-posterior-distributions"><i class="fa fa-check"></i><b>7.2</b> Prior and Posterior Distributions</a></li>
+<li class="chapter" data-level="7.3" data-path="7-estimation.html"><a href="7-estimation.html#conjugate-prior-distributions"><i class="fa fa-check"></i><b>7.3</b> Conjugate Prior Distributions</a></li>
+<li class="chapter" data-level="7.4" data-path="7-estimation.html"><a href="7-estimation.html#bayes-estimators"><i class="fa fa-check"></i><b>7.4</b> Bayes Estimators</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-gamma-function.html"><a href="A-gamma-function.html"><i class="fa fa-check"></i><b>A</b> Gamma Function</a></li>
@@ -203,6 +209,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Recognize <span class="math inline">\(h(x,\lambda)\)</span> as the kernel of a Gamma distribution. What are the parameters of the posterior distribution?</li>
 </ol></li>
 </ol>
+</div>
+<div id="conjugate-prior-distributions" class="section level2">
+<h2><span class="header-section-number">7.3</span> Conjugate Prior Distributions</h2>
+<ol style="list-style-type: decimal">
+<li><p>Suppose that the proportion <span class="math inline">\(\theta\)</span> of defective items in a large shipment is unknown and that the prior distribution of <span class="math inline">\(\theta\)</span> is <span class="math inline">\(\textrm{Beta}(\alpha=2, \beta=200)\)</span>. If 100 itiems are selected at random, and three are found to be defective, what is the posterior distribution of <span class="math inline">\(\theta\)</span>?</p></li>
+<li><p>Suppose that the number of defects in a roll of aluminum has a Poisson distribution with rate parameter <span class="math inline">\(\theta\)</span>. Suppose that we use a prior distribution <span class="math inline">\(\theta \sim \textrm{Gamma}(3, 1)\)</span>. Determine the posterior distribution of <span class="math inline">\(\theta\)</span>.</p></li>
+<li><p>Suppose that <span class="math inline">\(X \sim \textrm{NegBinomial}(r,p)\)</span> and <span class="math inline">\(r\)</span> is known, but we are interested in inference on <span class="math inline">\(p\)</span>. Show that <span class="math inline">\(p \sim \textrm{Beta}(\alpha,\beta)\)</span> is conjugate prior by deriving the posterior distribution.</p></li>
+<li>Suppose that the continuous random variable <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Uniform}(0, \theta)\)</span>. The conjugate prior distribution for <span class="math inline">\(\theta\)</span> is the Pareto distribution, which has pdf <span class="math display">\[f(x|x_0, \alpha) = \frac{\alpha x_0^\alpha}{x^{\alpha+1}}\;I(x &gt; x_0)\]</span>
+<ol style="list-style-type: lower-alpha">
+<li>Graph the Pareto distribution with <span class="math inline">\(x_0=1\)</span>, and <span class="math inline">\(\alpha=2\)</span> and again with <span class="math inline">\(\alpha=3\)</span>.</li>
+<li>Show that the joint distribution of <span class="math inline">\(X_1,\dots,X_n\)</span> can be written in terms of the sample maximum, which you may denote <span class="math inline">\(X_{(n)}\)</span>. Make sure to use an indicator function to denote the support of the distribution.</li>
+<li>Consider the prior distribtion on <span class="math inline">\(\theta \sim \textrm{Pareto}(\theta_0, \alpha)\)</span>. Write down the prior pdf, again making sure to include your indicator function.</li>
+<li>If <span class="math inline">\(x_{(n)} \ge \theta_0\)</span>, what is the posterior distribution of <span class="math inline">\(\theta\)</span>?</li>
+</ol></li>
+</ol>
+</div>
+<div id="bayes-estimators" class="section level2">
+<h2><span class="header-section-number">7.4</span> Bayes Estimators</h2>
 
 </div>
 </div>

@@ -12,3 +12,21 @@ Nothing on this section.
 2. Suppose that the number of mice per hectare follows a $X\sim \textrm{Poisson}(\lambda)$ distribution, and our prior distribution for $\lambda$ is Gamma($\alpha=2, \beta=1$) distribution. Suppose that we collect one observation $x$.
     a. Show that $$\xi(\lambda | x) \propto g(x)h(x,\lambda) = \frac{1}{(x-1)!}\,e^{-2\lambda}\lambda^x$$
     b. Recognize $h(x,\lambda)$ as the kernel of a Gamma distribution. What are the parameters of the posterior distribution?
+
+
+## Conjugate Prior Distributions
+
+1. Suppose that the proportion $\theta$ of defective items in a large shipment is unknown and that the prior distribution of $\theta$ is $\textrm{Beta}(\alpha=2, \beta=200)$. If 100 itiems are selected at random, and three are found to be defective, what is the posterior distribution of $\theta$?
+
+2. Suppose that the number of defects in a roll of aluminum has a Poisson distribution with rate parameter $\theta$. Suppose that we use a prior distribution $\theta \sim \textrm{Gamma}(3, 1)$. Determine the posterior distribution of $\theta$.
+
+3. Suppose that $X \sim \textrm{NegBinomial}(r,p)$ and $r$ is known, but we are interested in inference on $p$. Show that $p \sim \textrm{Beta}(\alpha,\beta)$ is conjugate prior by deriving the posterior distribution.
+
+4. Suppose that the continuous random variable $X_i \stackrel{iid}{\sim} \textrm{Uniform}(0, \theta)$. The conjugate prior distribution for $\theta$ is the Pareto distribution, which has pdf
+$$f(x|x_0, \alpha) = \frac{\alpha x_0^\alpha}{x^{\alpha+1}}\;I(x > x_0)$$
+    a. Graph the Pareto distribution with $x_0=1$, and $\alpha=2$ and again with $\alpha=3$.
+    b. Show that the joint distribution of $X_1,\dots,X_n$ can be written in terms of the sample maximum, which you may denote $X_{(n)}$. Make sure to use an indicator function to denote the support of the distribution.
+    c. Consider the prior distribtion on $\theta \sim \textrm{Pareto}(\theta_0, \alpha)$. Write down the prior pdf, again making sure to include your indicator function.
+    d. If $x_{(n)} \ge \theta_0$, what is the posterior distribution of $\theta$?
+    
+## Bayes Estimators

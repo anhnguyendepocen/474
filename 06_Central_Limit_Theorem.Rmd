@@ -1,4 +1,18 @@
 
+
 # Large Random Samples
 
+## Introduction
+
+## Law of Large Numbers
+1. It is said that a sequence of random variables $X_i$ converges to the constant $b$ in *quadratic mean* if
+$$\lim_{n\to\infty}E\left[ (X_n-b)^2 \right] = 0$$
+Show this equality is satisfied if and only if
+$$\lim_{n\to\infty} E(X_n) = b \;\;\;\; \textrm{ and } \;\;\;\; \lim_{n\to\infty} Var(X_n)=0$$
+_Hint: $E[ (Y-c)^2 ] = (\mu -c)^2 + \sigma^2)$ where $\mu=E(Y)$ and $\sigma^2 = Var(Y)$._
+
+2. Prove that if a sequence of random variables $Z_n$ converges to a constant $b$ in quadratic mean, then the sequence also converges to $b$ in probability. 
+
+
+## Central Limit Theorem
 1. State and prove the Central Limit Theorem (Theorem 6.3.1).
