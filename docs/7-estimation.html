@@ -227,6 +227,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="bayes-estimators" class="section level2">
 <h2><span class="header-section-number">7.4</span> Bayes Estimators</h2>
+<ol style="list-style-type: decimal">
+<li>Supposet that a random sample of size <span class="math inline">\(n\)</span> is taken from a Bernoulli distribution with unknown probability of success <span class="math inline">\(\theta\)</span>. As usual, we will assign the conjugate prior <span class="math inline">\(\textrm{Beta}(\alpha, \beta)\)</span>. Denote the mean of the prior distribution <span class="math inline">\(\mu_0\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Show that the Bayes estimator under squared error loss will be a weighted average of the sample mean and <span class="math inline">\(\mu_0\)</span>. That is, show that <span class="math display">\[\hat{\theta}_n = \gamma_n \bar{X}_n + (1-\gamma_n)\mu_0\]</span></li>
+<li>Show that <span class="math inline">\(\hat{\theta}_n\)</span> is a consistent estimator of <span class="math inline">\(\theta\)</span>.</li>
+</ol></li>
+<li>Suppose that a random sample of size <span class="math inline">\(n\)</span> is taken from a Poisson distribution for which the value of the mean <span class="math inline">\(\theta\)</span> is unknown, and the prior distribution of <span class="math inline">\(\theta\)</span> is a gamma distribution for which the mean is <span class="math inline">\(\mu_0\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Show that <span class="math inline">\(\hat{\theta}\)</span>, the mean of the posterior distribution of <span class="math inline">\(\theta\)</span>, will be a weighted average of sample mean <span class="math inline">\(\bar{X}\)</span> and the prior mean <span class="math inline">\(\mu_0\)</span>.</li>
+<li>Show that <span class="math inline">\(\hat{\theta}_n\)</span> is a consistent estimator of <span class="math inline">\(\theta\)</span>.</li>
+</ol></li>
+<li>Suppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Uniform}(0,\theta)\)</span> and that the prior distribution for <span class="math inline">\(\theta\)</span> is <span class="math inline">\(\textrm{Pareto}(\theta_0, \alpha)\)</span> where <span class="math inline">\(\alpha &gt; 1\)</span>. Suppose that we observe <span class="math inline">\(\max(x_i) &gt; \theta_0\)</span>. What is the Bayes estimator of <span class="math inline">\(\theta\)</span> under the squared error loss function?</li>
+</ol>
 
 </div>
 </div>
