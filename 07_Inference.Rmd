@@ -10,7 +10,7 @@ Nothing on this section.
 1. Suppose that the proportion $\theta$ of defective items in a lot is either $0.1$ or $0.2$ and the prior probability function is $\xi(0.1)=0.6$ and $\xi(0.2)=0.4$. Suppose that nine items were selected at random, and exactly two of them were defective. Determine the posterior distribution of $\theta$.
 
 2. Suppose that the number of mice per hectare follows a $X\sim \textrm{Poisson}(\lambda)$ distribution, and our prior distribution for $\lambda$ is Gamma($\alpha=2, \beta=1$) distribution. Suppose that we collect one observation $x$.
-    a. Show that $$\xi(\lambda | x) \propto g(x)h(x,\lambda) = \frac{1}{(x-1)!}\,e^{-2\lambda}\lambda^x$$
+    a. Show that $$\xi(\lambda | x) \propto g(x)h(x,\lambda) = \frac{1}{(x-1)!}\,e^{-2\lambda}\lambda^{x+1}$$
     b. Recognize $h(x,\lambda)$ as the kernel of a Gamma distribution. What are the parameters of the posterior distribution?
 
 
