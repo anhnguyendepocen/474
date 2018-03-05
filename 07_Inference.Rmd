@@ -51,5 +51,7 @@ $$f(x|x_0, \alpha) = \frac{\alpha x_0^\alpha}{x^{\alpha+1}}\;I(x > x_0)$$
 2. Suppose that $X_1, \dots, X_n$ form a random sample from the normal distribution for which the mean $\mu$ is known, but the variance, $\sigma^2$, is unknown.  Find the MLE of $\sigma^2$.  _Hint, it is NOT the sample variance!_
 
 3. Suppose that $X_1, \dots, X_n$ form a random sample from a distribution with pdf
-$$f(x|theta) = \theta x^{\theta-1} \, \cdot I( 0 < x < 1 )$$
-where $\theta > 0$.  Find the MLE of $\theta$.
+$$f(x|\theta) = \theta x^{\theta-1} \,  I( 0 < x < 1 )$$
+where $\theta > 0$.  
+    a) Graph the distribution for various values of $\theta$.
+    b) Find the MLE of $\theta$.
