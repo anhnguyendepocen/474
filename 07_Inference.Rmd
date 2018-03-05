@@ -41,3 +41,15 @@ $$f(x|x_0, \alpha) = \frac{\alpha x_0^\alpha}{x^{\alpha+1}}\;I(x > x_0)$$
     b. Show that $\hat{\theta}_n$ is a consistent estimator of $\theta$.
     
 3. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Uniform}(0,\theta)$ and that the prior distribution for $\theta$ is $\textrm{Pareto}(\theta_0, \alpha)$ where $\alpha > 1$. Suppose that we observe $\max(x_i) > \theta_0$. What is the Bayes estimator of $\theta$ under the squared error loss function?
+
+## Maximum Likelihood Estimators
+
+1. Suppose that $X_1, \dots, X_n$ form a random sample from a Poisson($\theta$) distribution for which the mean $\theta$ is unknown and $\theta > 0$.
+    a. Determine the MLE of $\theta$, assuming that at least one of the observed values is different than zero.
+    b. Show that the MLE of $\theta$ does not exist if every observed value is zero.
+    
+2. Suppose that $X_1, \dots, X_n$ form a random sample from the normal distribution for which the mean $\mu$ is known, but the variance, $\sigma^2$, is unknown.  Find the MLE of $\sigma^2$.  _Hint, it is NOT the sample variance!_
+
+3. Suppose that $X_1, \dots, X_n$ form a random sample from a distribution with pdf
+$$f(x|theta) = \theta x^{\theta-1} \, \cdot I( 0 < x < 1 )$$
+where $\theta > 0$.  Find the MLE of $\theta$.
