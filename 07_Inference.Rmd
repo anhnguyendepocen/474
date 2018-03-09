@@ -64,7 +64,7 @@ where $\theta > 0$.
 
 2. Suppose that $X_i \stackrel{iid}{\sim} N( \mu, \sigma^2 )$. Find the MLE of the 0.95 quantile of the distribution, that is, of the point $\theta$ such that $Pr( X \le \theta) = 0.95$.
 
-3. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)$. Find the MLE of $\theta = \alpha/\beta$.
+3. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)$ where $\alpha$ is known. Find the MLE of $\beta$ and then also find the MLE of $\theta = \alpha/\beta$.
 
 4. Supppose that $X_i \stackrel{iid}{\sim} \textrm{Beta}( \alpha, \beta )$.
     a. Find the Method of Moment estimators for $\alpha$ and $\beta$.
