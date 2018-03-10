@@ -66,9 +66,7 @@ where $\theta > 0$.
 
 3. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)$ where $\alpha$ is known. Find the MLE of $\beta$ and then also find the MLE of $\theta = \alpha/\beta$.
 
-4. Supppose that $X_i \stackrel{iid}{\sim} \textrm{Beta}( \alpha, \beta )$.
-    a. Find the Method of Moment estimators for $\alpha$ and $\beta$.
-    b. Show that these estimators are not the MLEs for $\alpha$ and $\beta$.
-    
+4. Supppose that $X_i \stackrel{iid}{\sim} \textrm{Beta}( \alpha, \beta )$. Find the Method of Moment estimators for $\alpha$ and $\beta$. _Hint: This sort of calculation can be done easily in Mathematica or Wolfram Alpha. It really pays to get comfortable with some software packages._
+
 ## Sufficient Statistics
 
