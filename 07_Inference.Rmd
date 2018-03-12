@@ -70,3 +70,10 @@ where $\theta > 0$.
 
 ## Sufficient Statistics
 
+1. Suppose that $X_i \stackrel{iid}{\sim} \textrm{NegBinom}(r,p)$ where $r$ is known. Show that $T=\sum X_i$ is sufficient for $p$.
+
+2. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)$ where $\alpha$ is known. Show that $T=\sum X_i$ is sufficient for $\beta$.
+
+3. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)$ where $\beta$ is known. 
+    a) Show that $T=\prod X_i$ is sufficient for $\alpha$.
+    b) Show that $T=\sum \log(X_i)$ is also sufficient for $\alpha$.
