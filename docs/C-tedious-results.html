@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>STA 474 - Mathematical Statistics</title>
   <meta name="description" content="STA 474 - Mathematical Statistics">
-  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="STA 474 - Mathematical Statistics" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Derek L. Sonderegger">
 
 
-<meta name="date" content="2018-03-10">
+<meta name="date" content="2018-04-01">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -170,6 +170,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="7.6" data-path="7-estimation.html"><a href="7-estimation.html#properties-of-maximum-likelihood-estimators"><i class="fa fa-check"></i><b>7.6</b> Properties of Maximum Likelihood Estimators</a></li>
 <li class="chapter" data-level="7.7" data-path="7-estimation.html"><a href="7-estimation.html#sufficient-statistics"><i class="fa fa-check"></i><b>7.7</b> Sufficient Statistics</a></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html"><i class="fa fa-check"></i><b>8</b> Sampling Distributions of Estimators</a><ul>
+<li class="chapter" data-level="8.1" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#sampling-distribution-of-a-statistic"><i class="fa fa-check"></i><b>8.1</b> Sampling Distribution of a Statistic</a></li>
+<li class="chapter" data-level="8.2" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#the-chi-squared-distribution"><i class="fa fa-check"></i><b>8.2</b> The Chi-Squared Distribution</a></li>
+<li class="chapter" data-level="8.3" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#joint-distribution-of-the-sample-mean-and-sample-variance"><i class="fa fa-check"></i><b>8.3</b> Joint Distribution of the Sample Mean and Sample Variance</a></li>
+<li class="chapter" data-level="8.4" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#t-distribution"><i class="fa fa-check"></i><b>8.4</b> t-distribution</a></li>
+<li class="chapter" data-level="8.5" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#confidence-intervals"><i class="fa fa-check"></i><b>8.5</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="8.6" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#bayesian-analysis-of-data-from-normal-distribution"><i class="fa fa-check"></i><b>8.6</b> Bayesian Analysis of Data from Normal Distribution</a></li>
+<li class="chapter" data-level="8.7" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#unbiased-estimators"><i class="fa fa-check"></i><b>8.7</b> Unbiased Estimators</a></li>
+<li class="chapter" data-level="8.8" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#fishers-information"><i class="fa fa-check"></i><b>8.8</b> Fisher’s Information</a></li>
+<li class="chapter" data-level="8.9" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#bayes-estimators-1"><i class="fa fa-check"></i><b>8.9</b> Bayes Estimators</a></li>
+<li class="chapter" data-level="8.10" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#maximum-likelihood-estimators-1"><i class="fa fa-check"></i><b>8.10</b> Maximum Likelihood Estimators</a></li>
+<li class="chapter" data-level="8.11" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#properties-of-maximum-likelihood-estimators-1"><i class="fa fa-check"></i><b>8.11</b> Properties of Maximum Likelihood Estimators</a></li>
+<li class="chapter" data-level="8.12" data-path="8-sampling-distributions-of-estimators.html"><a href="8-sampling-distributions-of-estimators.html#sufficient-statistics-1"><i class="fa fa-check"></i><b>8.12</b> Sufficient Statistics</a></li>
+</ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-gamma-function.html"><a href="A-gamma-function.html"><i class="fa fa-check"></i><b>A</b> Gamma Function</a></li>
 <li class="chapter" data-level="B" data-path="B-useful-series-results.html"><a href="B-useful-series-results.html"><i class="fa fa-check"></i><b>B</b> Useful Series Results</a><ul>
@@ -241,6 +255,7 @@ gitbook.start({
 "facebook": false,
 "twitter": false,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
@@ -270,9 +285,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

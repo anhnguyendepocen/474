@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="5-common-distributions.html">
-<link rel="next" href="7-estimation.html">
+<link rel="prev" href="7-estimation.html">
+<link rel="next" href="A-gamma-function.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -210,33 +210,123 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="large-random-samples" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Large Random Samples</h1>
-<div id="introduction-1" class="section level2">
-<h2><span class="header-section-number">6.1</span> Introduction</h2>
+<div id="sampling-distributions-of-estimators" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Sampling Distributions of Estimators</h1>
+<div id="sampling-distribution-of-a-statistic" class="section level2">
+<h2><span class="header-section-number">8.1</span> Sampling Distribution of a Statistic</h2>
+<p>Nothing on this section.</p>
 </div>
-<div id="law-of-large-numbers" class="section level2">
-<h2><span class="header-section-number">6.2</span> Law of Large Numbers</h2>
+<div id="the-chi-squared-distribution" class="section level2">
+<h2><span class="header-section-number">8.2</span> The Chi-Squared Distribution</h2>
 <ol style="list-style-type: decimal">
-<li><p>It is said that a sequence of random variables <span class="math inline">\(X_i\)</span> converges to the constant <span class="math inline">\(b\)</span> in <em>quadratic mean</em> if <span class="math display">\[\lim_{n\to\infty}E\left[ (X_n-b)^2 \right] = 0\]</span> Show this equality is satisfied if and only if <span class="math display">\[\lim_{n\to\infty} E(X_n) = b \;\;\;\; \textrm{ and } \;\;\;\; \lim_{n\to\infty} Var(X_n)=0\]</span> <em>Hint: <span class="math inline">\(E[ (Y-c)^2 ] = (\mu -c)^2 + \sigma^2)\)</span> where <span class="math inline">\(\mu=E(Y)\)</span> and <span class="math inline">\(\sigma^2 = Var(Y)\)</span>.</em></p></li>
-<li><p>Prove that if a sequence of random variables <span class="math inline">\(Z_n\)</span> converges to a constant <span class="math inline">\(b\)</span> in quadratic mean, then the sequence also converges to <span class="math inline">\(b\)</span> in probability.</p></li>
+<li><p>Suppose that <span class="math inline">\(X_1, \dots , X_n\)</span> form a random sample from the normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>. Find the distribution of <span class="math display">\[\frac{n (\bar{X} -\mu)^2}{\sigma^2}\]</span></p></li>
+<li><p>Suppose that <span class="math inline">\(Z_1, \dots , Z_6\)</span> form a random sample from the standard normal distribution. Let <span class="math inline">\(Y = (Z_1 + Z_2 + Z_3)^2 + (Z_4 + Z_5 + Z_6)^2.\)</span> Find the value of <span class="math inline">\(c\)</span> such that <span class="math inline">\(cY\)</span> has a Chi-squared distribution.</p></li>
 </ol>
 </div>
-<div id="central-limit-theorem" class="section level2">
-<h2><span class="header-section-number">6.3</span> Central Limit Theorem</h2>
+<div id="joint-distribution-of-the-sample-mean-and-sample-variance" class="section level2">
+<h2><span class="header-section-number">8.3</span> Joint Distribution of the Sample Mean and Sample Variance</h2>
+<p>Nothing here.</p>
+</div>
+<div id="t-distribution" class="section level2">
+<h2><span class="header-section-number">8.4</span> t-distribution</h2>
 <ol style="list-style-type: decimal">
-<li>State and prove the Central Limit Theorem (Theorem 6.3.1).</li>
+<li><p>Suppose that <span class="math inline">\(X_1, \dots , X_n\)</span> form a random sample from the normal distribution with unknown mean <span class="math inline">\(\mu\)</span> and unknown standard deviation <span class="math inline">\(\sigma^2\)</span>, and let <span class="math inline">\(\hat\mu\)</span> and <span class="math inline">\(\hat\sigma^2\)</span> denote the M.L.E.’s of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^2\)</span>. For the sample size <span class="math inline">\(n = 17\)</span>, find a value of <span class="math inline">\(k\)</span> such that <span class="math display">\[Pr(\hat\mu &gt; \mu +k\hat \sigma ) =0.95\]</span>.</p></li>
+<li><p>Suppose that <span class="math inline">\(Z_1, \dots , Z_5\)</span> form a random sample from the standard normal distribution. Let <span class="math inline">\(Y = \frac{Z_1 + Z_2}{ \sqrt{Z_3^2 + Z_4^2 + Z_5^2 }}.\)</span> Find the value of <span class="math inline">\(c\)</span> such that <span class="math inline">\(cY\)</span> has a <span class="math inline">\(t\)</span> distribution.</p></li>
+</ol>
+</div>
+<div id="confidence-intervals" class="section level2">
+<h2><span class="header-section-number">8.5</span> Confidence Intervals</h2>
+</div>
+<div id="bayesian-analysis-of-data-from-normal-distribution" class="section level2">
+<h2><span class="header-section-number">8.6</span> Bayesian Analysis of Data from Normal Distribution</h2>
+</div>
+<div id="unbiased-estimators" class="section level2">
+<h2><span class="header-section-number">8.7</span> Unbiased Estimators</h2>
+</div>
+<div id="fishers-information" class="section level2">
+<h2><span class="header-section-number">8.8</span> Fisher’s Information</h2>
+<ol style="list-style-type: decimal">
+<li><p>Suppose that the proportion <span class="math inline">\(\theta\)</span> of defective items in a large shipment is unknown and that the prior distribution of <span class="math inline">\(\theta\)</span> is <span class="math inline">\(\textrm{Beta}(\alpha=2, \beta=200)\)</span>. If 100 itiems are selected at random, and three are found to be defective, what is the posterior distribution of <span class="math inline">\(\theta\)</span>?</p></li>
+<li><p>Suppose that the number of defects in a roll of aluminum has a Poisson distribution with rate parameter <span class="math inline">\(\theta\)</span>. Suppose that we use a prior distribution <span class="math inline">\(\theta \sim \textrm{Gamma}(3, 1)\)</span>. Determine the posterior distribution of <span class="math inline">\(\theta\)</span>.</p></li>
+<li><p>Suppose that <span class="math inline">\(X \sim \textrm{NegBinomial}(r,p)\)</span> and <span class="math inline">\(r\)</span> is known, but we are interested in inference on <span class="math inline">\(p\)</span>. Show that <span class="math inline">\(p \sim \textrm{Beta}(\alpha,\beta)\)</span> is conjugate prior by deriving the posterior distribution.</p></li>
+<li>Suppose that the continuous random variable <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Uniform}(0, \theta)\)</span>. The conjugate prior distribution for <span class="math inline">\(\theta\)</span> is the Pareto distribution, which has pdf <span class="math display">\[f(x|x_0, \alpha) = \frac{\alpha x_0^\alpha}{x^{\alpha+1}}\;I(x &gt; x_0)\]</span>
+<ol style="list-style-type: lower-alpha">
+<li>Graph the Pareto distribution with <span class="math inline">\(x_0=1\)</span>, and <span class="math inline">\(\alpha=2\)</span> and again with <span class="math inline">\(\alpha=3\)</span>.</li>
+<li>Show that the joint distribution of <span class="math inline">\(X_1,\dots,X_n\)</span> can be written in terms of the sample maximum, which you may denote <span class="math inline">\(X_{(n)}\)</span>. Make sure to use an indicator function to denote the support of the distribution.</li>
+<li>Consider the prior distribtion on <span class="math inline">\(\theta \sim \textrm{Pareto}(\theta_0, \alpha)\)</span>. Write down the prior pdf, again making sure to include your indicator function.</li>
+<li>If <span class="math inline">\(x_{(n)} \ge \theta_0\)</span>, what is the posterior distribution of <span class="math inline">\(\theta\)</span>?</li>
+</ol></li>
+</ol>
+</div>
+<div id="bayes-estimators-1" class="section level2">
+<h2><span class="header-section-number">8.9</span> Bayes Estimators</h2>
+<ol style="list-style-type: decimal">
+<li>Supposet that a random sample of size <span class="math inline">\(n\)</span> is taken from a Bernoulli distribution with unknown probability of success <span class="math inline">\(\theta\)</span>. As usual, we will assign the conjugate prior <span class="math inline">\(\textrm{Beta}(\alpha, \beta)\)</span>. Denote the mean of the prior distribution <span class="math inline">\(\mu_0\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Show that the Bayes estimator under squared error loss will be a weighted average of the sample mean and <span class="math inline">\(\mu_0\)</span>. That is, show that <span class="math display">\[\hat{\theta}_n = \gamma_n \bar{X}_n + (1-\gamma_n)\mu_0\]</span></li>
+<li>Show that <span class="math inline">\(\hat{\theta}_n\)</span> is a consistent estimator of <span class="math inline">\(\theta\)</span>.</li>
+</ol></li>
+<li>Suppose that a random sample of size <span class="math inline">\(n\)</span> is taken from a Poisson distribution for which the value of the mean <span class="math inline">\(\theta\)</span> is unknown, and the prior distribution of <span class="math inline">\(\theta\)</span> is a gamma distribution for which the mean is <span class="math inline">\(\mu_0\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Show that <span class="math inline">\(\hat{\theta}\)</span>, the mean of the posterior distribution of <span class="math inline">\(\theta\)</span>, will be a weighted average of sample mean <span class="math inline">\(\bar{X}\)</span> and the prior mean <span class="math inline">\(\mu_0\)</span>.</li>
+<li>Show that <span class="math inline">\(\hat{\theta}_n\)</span> is a consistent estimator of <span class="math inline">\(\theta\)</span>.</li>
+</ol></li>
+<li>Suppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Uniform}(0,\theta)\)</span> and that the prior distribution for <span class="math inline">\(\theta\)</span> is <span class="math inline">\(\textrm{Pareto}(\theta_0, \alpha)\)</span> where <span class="math inline">\(\alpha &gt; 1\)</span>. Suppose that we observe <span class="math inline">\(\max(x_i) &gt; \theta_0\)</span>. What is the Bayes estimator of <span class="math inline">\(\theta\)</span> under the squared error loss function?</li>
+</ol>
+</div>
+<div id="maximum-likelihood-estimators-1" class="section level2">
+<h2><span class="header-section-number">8.10</span> Maximum Likelihood Estimators</h2>
+<ol style="list-style-type: decimal">
+<li>Suppose that <span class="math inline">\(X_1, \dots, X_n\)</span> form a random sample from a Poisson(<span class="math inline">\(\theta\)</span>) distribution for which the mean <span class="math inline">\(\theta\)</span> is unknown and <span class="math inline">\(\theta &gt; 0\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Determine the MLE of <span class="math inline">\(\theta\)</span>, assuming that at least one of the observed values is different than zero.</li>
+<li>Show that the MLE of <span class="math inline">\(\theta\)</span> does not exist if every observed value is zero.</li>
+</ol></li>
+<li><p>Suppose that <span class="math inline">\(X_1, \dots, X_n\)</span> form a random sample from the normal distribution for which the mean <span class="math inline">\(\mu\)</span> is known, but the variance, <span class="math inline">\(\sigma^2\)</span>, is unknown. Find the MLE of <span class="math inline">\(\sigma^2\)</span>. <em>Hint, it is NOT the sample variance!</em></p></li>
+<li>Suppose that <span class="math inline">\(X_1, \dots, X_n\)</span> form a random sample from a distribution with pdf <span class="math display">\[f(x|\theta) = \theta x^{\theta-1} \,  I( 0 &lt; x &lt; 1 )\]</span> where <span class="math inline">\(\theta &gt; 0\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Graph the distribution for various values of <span class="math inline">\(\theta\)</span>.</li>
+<li>Find the MLE of <span class="math inline">\(\theta\)</span>.</li>
+</ol></li>
+</ol>
+</div>
+<div id="properties-of-maximum-likelihood-estimators-1" class="section level2">
+<h2><span class="header-section-number">8.11</span> Properties of Maximum Likelihood Estimators</h2>
+<ol style="list-style-type: decimal">
+<li>Suppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Exponential}(\theta)\)</span> for a sample of size <span class="math inline">\(n\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Find the MLE of <span class="math inline">\(\theta\)</span>.</li>
+<li>Find the MLE of the median of the distribution.</li>
+</ol></li>
+<li><p>Suppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} N( \mu, \sigma^2 )\)</span>. Find the MLE of the 0.95 quantile of the distribution, that is, of the point <span class="math inline">\(\theta\)</span> such that <span class="math inline">\(Pr( X \le \theta) = 0.95\)</span>.</p></li>
+<li><p>Suppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)\)</span> where <span class="math inline">\(\alpha\)</span> is known. Find the MLE of <span class="math inline">\(\beta\)</span> and then also find the MLE of <span class="math inline">\(\theta = \alpha/\beta\)</span>.</p></li>
+<li><p>Supppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Beta}( \alpha, \beta )\)</span>. Find the Method of Moment estimators for <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. <em>Hint: This sort of calculation can be done easily in Mathematica or Wolfram Alpha. It really pays to get comfortable with some software packages.</em></p></li>
+</ol>
+</div>
+<div id="sufficient-statistics-1" class="section level2">
+<h2><span class="header-section-number">8.12</span> Sufficient Statistics</h2>
+<ol style="list-style-type: decimal">
+<li><p>Suppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{NegBinom}(r,p)\)</span> where <span class="math inline">\(r\)</span> is known. Show that <span class="math inline">\(T=\sum X_i\)</span> is sufficient for <span class="math inline">\(p\)</span>.</p></li>
+<li><p>Suppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)\)</span> where <span class="math inline">\(\alpha\)</span> is known. Show that <span class="math inline">\(T=\sum X_i\)</span> is sufficient for <span class="math inline">\(\beta\)</span>.</p></li>
+<li>Suppose that <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)\)</span> where <span class="math inline">\(\beta\)</span> is known.
+<ol style="list-style-type: lower-alpha">
+<li>Show that <span class="math inline">\(T=\prod X_i\)</span> is sufficient for <span class="math inline">\(\alpha\)</span>.</li>
+<li>Show that <span class="math inline">\(T=\sum \log(X_i)\)</span> is also sufficient for <span class="math inline">\(\alpha\)</span>.</li>
+</ol></li>
 </ol>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="5-common-distributions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="7-estimation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="7-estimation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="A-gamma-function.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -266,7 +356,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/edit/master/474/06_Central_Limit_Theorem.Rmd",
+"link": "https://github.com/dereksonderegger/edit/master/474/08_Sampling_Distributions.Rmd",
 "text": "Edit"
 },
 "download": [["Probability.pdf", "PDF"], ["Probability.epub", "EPUB"]],

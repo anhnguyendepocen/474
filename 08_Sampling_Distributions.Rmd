@@ -1,0 +1,99 @@
+
+# Sampling Distributions of Estimators
+
+## Sampling Distribution of a Statistic
+
+Nothing on this section.
+
+## The Chi-Squared Distribution
+
+1. Suppose that $X_1, \dots , X_n$ form a random sample from the normal distribution with mean $\mu$ and variance $\sigma^2$. Find the distribution of
+$$\frac{n (\bar{X} -\mu)^2}{\sigma^2}$$
+
+2. Suppose that $Z_1, \dots , Z_6$ form a random sample from the standard normal distribution. Let 
+$Y = (Z_1 + Z_2 + Z_3)^2 + (Z_4 + Z_5 + Z_6)^2.$ 
+Find the value of $c$ such that $cY$ has a Chi-squared distribution.
+
+## Joint Distribution of the Sample Mean and Sample Variance
+
+Nothing here.
+
+## t-distribution
+1. Suppose that $X_1, \dots , X_n$ form a random sample from the normal distribution with unknown mean $\mu$ and unknown standard deviation $\sigma^2$, and let $\hat\mu$ and $\hat\sigma^2$ denote the M.L.E.'s of $\mu$ and $\sigma^2$. For the sample size $n = 17$, find a value of $k$ such that
+$$Pr(\hat\mu > \mu +k\hat \sigma ) =0.95$$.
+
+2. Suppose that $Z_1, \dots , Z_5$ form a random sample from the standard normal distribution. Let 
+$Y = \frac{Z_1 + Z_2}{  \sqrt{Z_3^2 + Z_4^2 + Z_5^2 }}.$ 
+Find the value of $c$ such that $cY$ has a $t$ distribution.
+
+
+
+## Confidence Intervals
+
+## Bayesian Analysis of Data from Normal Distribution
+
+## Unbiased Estimators
+
+## Fisher's Information
+
+1. Suppose that the proportion $\theta$ of defective items in a large shipment is unknown and that the prior distribution of $\theta$ is $\textrm{Beta}(\alpha=2, \beta=200)$. If 100 itiems are selected at random, and three are found to be defective, what is the posterior distribution of $\theta$?
+
+2. Suppose that the number of defects in a roll of aluminum has a Poisson distribution with rate parameter $\theta$. Suppose that we use a prior distribution $\theta \sim \textrm{Gamma}(3, 1)$. Determine the posterior distribution of $\theta$.
+
+3. Suppose that $X \sim \textrm{NegBinomial}(r,p)$ and $r$ is known, but we are interested in inference on $p$. Show that $p \sim \textrm{Beta}(\alpha,\beta)$ is conjugate prior by deriving the posterior distribution.
+
+4. Suppose that the continuous random variable $X_i \stackrel{iid}{\sim} \textrm{Uniform}(0, \theta)$. The conjugate prior distribution for $\theta$ is the Pareto distribution, which has pdf
+$$f(x|x_0, \alpha) = \frac{\alpha x_0^\alpha}{x^{\alpha+1}}\;I(x > x_0)$$
+    a. Graph the Pareto distribution with $x_0=1$, and $\alpha=2$ and again with $\alpha=3$.
+    b. Show that the joint distribution of $X_1,\dots,X_n$ can be written in terms of the sample maximum, which you may denote $X_{(n)}$. Make sure to use an indicator function to denote the support of the distribution.
+    c. Consider the prior distribtion on $\theta \sim \textrm{Pareto}(\theta_0, \alpha)$. Write down the prior pdf, again making sure to include your indicator function.
+    d. If $x_{(n)} \ge \theta_0$, what is the posterior distribution of $\theta$?
+    
+## Bayes Estimators
+
+1. Supposet that a random sample of size $n$ is taken from a Bernoulli distribution with unknown probability of success $\theta$. As usual, we will assign the conjugate prior $\textrm{Beta}(\alpha, \beta)$.  Denote the mean of the prior distribution $\mu_0$. 
+    a. Show that the Bayes estimator under squared error loss will be a weighted average of the sample mean and $\mu_0$.  That is, show that 
+    $$\hat{\theta}_n = \gamma_n \bar{X}_n + (1-\gamma_n)\mu_0$$
+    b. Show that $\hat{\theta}_n$ is a consistent estimator of $\theta$.
+    
+2. Suppose that a random sample of size $n$ is taken from a Poisson distribution for which the value of the mean $\theta$ is unknown, and the prior distribution of $\theta$ is a gamma distribution for which the mean is $\mu_0$. 
+    a. Show that $\hat{\theta}$, the mean of the posterior distribution of $\theta$, will be a weighted average of sample mean $\bar{X}$ and the prior mean $\mu_0$.
+    b. Show that $\hat{\theta}_n$ is a consistent estimator of $\theta$.
+    
+3. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Uniform}(0,\theta)$ and that the prior distribution for $\theta$ is $\textrm{Pareto}(\theta_0, \alpha)$ where $\alpha > 1$. Suppose that we observe $\max(x_i) > \theta_0$. What is the Bayes estimator of $\theta$ under the squared error loss function?
+
+## Maximum Likelihood Estimators
+
+1. Suppose that $X_1, \dots, X_n$ form a random sample from a Poisson($\theta$) distribution for which the mean $\theta$ is unknown and $\theta > 0$.
+    a. Determine the MLE of $\theta$, assuming that at least one of the observed values is different than zero.
+    b. Show that the MLE of $\theta$ does not exist if every observed value is zero.
+    
+2. Suppose that $X_1, \dots, X_n$ form a random sample from the normal distribution for which the mean $\mu$ is known, but the variance, $\sigma^2$, is unknown.  Find the MLE of $\sigma^2$.  _Hint, it is NOT the sample variance!_
+
+3. Suppose that $X_1, \dots, X_n$ form a random sample from a distribution with pdf
+$$f(x|\theta) = \theta x^{\theta-1} \,  I( 0 < x < 1 )$$
+where $\theta > 0$.  
+    a) Graph the distribution for various values of $\theta$.
+    b) Find the MLE of $\theta$.
+    
+## Properties of Maximum Likelihood Estimators
+
+1. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Exponential}(\theta)$ for a sample of size $n$.
+    a) Find the MLE of $\theta$.
+    b) Find the MLE of the median of the distribution.
+
+2. Suppose that $X_i \stackrel{iid}{\sim} N( \mu, \sigma^2 )$. Find the MLE of the 0.95 quantile of the distribution, that is, of the point $\theta$ such that $Pr( X \le \theta) = 0.95$.
+
+3. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)$ where $\alpha$ is known. Find the MLE of $\beta$ and then also find the MLE of $\theta = \alpha/\beta$.
+
+4. Supppose that $X_i \stackrel{iid}{\sim} \textrm{Beta}( \alpha, \beta )$. Find the Method of Moment estimators for $\alpha$ and $\beta$. _Hint: This sort of calculation can be done easily in Mathematica or Wolfram Alpha. It really pays to get comfortable with some software packages._
+
+## Sufficient Statistics
+
+1. Suppose that $X_i \stackrel{iid}{\sim} \textrm{NegBinom}(r,p)$ where $r$ is known. Show that $T=\sum X_i$ is sufficient for $p$.
+
+2. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)$ where $\alpha$ is known. Show that $T=\sum X_i$ is sufficient for $\beta$.
+
+3. Suppose that $X_i \stackrel{iid}{\sim} \textrm{Gamma}(\alpha, \beta)$ where $\beta$ is known. 
+    a) Show that $T=\prod X_i$ is sufficient for $\alpha$.
+    b) Show that $T=\sum \log(X_i)$ is also sufficient for $\alpha$.
