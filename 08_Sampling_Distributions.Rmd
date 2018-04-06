@@ -27,9 +27,17 @@ $Y = \frac{Z_1 + Z_2}{  \sqrt{Z_3^2 + Z_4^2 + Z_5^2 }}.$
 Find the value of $c$ such that $cY$ has a $t$ distribution.
 
 
-
 ## Confidence Intervals
 
+1. Suppose that a sample of $n$ observations where  $X_i \stackrel{iid}{\sim} N(\mu, \sigma^2)$ and we are interested in creating a confidence interval for $\sigma^2$ using the MLE estimator $\hat{\sigma}^2 = \frac{1}{n}\sum(x_i - \bar{x})^2$
+    a) What function of $\hat{\sigma}^2$ and $\sigma^2$ has a completely known distribution (though the distribution depends on the known value of $n$)? 
+    b) Using quantiles from the known distribution which you can denote as $\chi^*_{q,df}$ , create a formula for a $95$% confidence interval for $\sigma^2$.
+ 
+2. Suppose that a smaple $n$ observations where $X_i \stackrel{iid}{\sim} \textrm{Exponential}(\beta)$ and we wish to find a 90% Confidence interval for $\beta$. Recall that $\sum X_i$ was the sufficient statistic, so our confidence interval should be a function of $\sum X_i$ and $n$ should be appropriate.
+    a) What is the distribution of $\sum{X_i}$ and $\beta \sum X_i$? _Hint: recall that the Exponential is a special case of the Gamma distribution and we had a number of rules that we derived using the MGF method regarding the sum of Gamma random variables and a Gamma random variable multiplied by a constant._
+    b) Denote the $q$th quantile of an arbitrary Gamma distribution as $\gamma^*_{q,\alpha,\beta}$. Use $\beta \sum X_i$ as a pivotal quantity to create a 90% CI for $\beta$.
+  
+    
 ## Bayesian Analysis of Data from Normal Distribution
 
 ## Unbiased Estimators

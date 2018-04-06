@@ -25,7 +25,7 @@
 <meta name="author" content="Derek L. Sonderegger">
 
 
-<meta name="date" content="2018-04-01">
+<meta name="date" content="2018-04-06">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -232,6 +232,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="confidence-intervals" class="section level2">
 <h2><span class="header-section-number">8.5</span> Confidence Intervals</h2>
+<ol style="list-style-type: decimal">
+<li>Suppose that a sample of <span class="math inline">\(n\)</span> observations where <span class="math inline">\(X_i \stackrel{iid}{\sim} N(\mu, \sigma^2)\)</span> and we are interested in creating a confidence interval for <span class="math inline">\(\sigma^2\)</span> using the MLE estimator <span class="math inline">\(\hat{\sigma}^2 = \frac{1}{n}\sum(x_i - \bar{x})^2\)</span>
+<ol style="list-style-type: lower-alpha">
+<li>What function of <span class="math inline">\(\hat{\sigma}^2\)</span> and <span class="math inline">\(\sigma^2\)</span> has a completely known distribution (though the distribution depends on the known value of <span class="math inline">\(n\)</span>)?</li>
+<li>Using quantiles from the known distribution which you can denote as <span class="math inline">\(\chi^*_{q,df}\)</span> , create a formula for a <span class="math inline">\(95\)</span>% confidence interval for <span class="math inline">\(\sigma^2\)</span>.</li>
+</ol></li>
+<li>Suppose that a smaple <span class="math inline">\(n\)</span> observations where <span class="math inline">\(X_i \stackrel{iid}{\sim} \textrm{Exponential}(\beta)\)</span> and we wish to find a 90% Confidence interval for <span class="math inline">\(\beta\)</span>. Recall that <span class="math inline">\(\sum X_i\)</span> was the sufficient statistic, so our confidence interval should be a function of <span class="math inline">\(\sum X_i\)</span> and <span class="math inline">\(n\)</span> should be appropriate.
+<ol style="list-style-type: lower-alpha">
+<li>What is the distribution of <span class="math inline">\(\sum{X_i}\)</span> and <span class="math inline">\(\beta \sum X_i\)</span>? <em>Hint: recall that the Exponential is a special case of the Gamma distribution and we had a number of rules that we derived using the MGF method regarding the sum of Gamma random variables and a Gamma random variable multiplied by a constant.</em></li>
+<li>Denote the <span class="math inline">\(q\)</span>th quantile of an arbitrary Gamma distribution as <span class="math inline">\(\gamma^*_{q,\alpha,\beta}\)</span>. Use <span class="math inline">\(\beta \sum X_i\)</span> as a pivotal quantity to create a 90% CI for <span class="math inline">\(\beta\)</span>.</li>
+</ol></li>
+</ol>
 </div>
 <div id="bayesian-analysis-of-data-from-normal-distribution" class="section level2">
 <h2><span class="header-section-number">8.6</span> Bayesian Analysis of Data from Normal Distribution</h2>
