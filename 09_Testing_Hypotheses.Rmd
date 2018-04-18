@@ -1,0 +1,28 @@
+
+# Testing Hypotheses
+
+## Problems of Testing Hypotheses
+
+1.  Let $X$ have the exponential distribution with parameter $\beta$.     Suppose that we wish to test the hypotheses:
+    $$\begin{aligned} 
+      H_0:& \;\; \beta \ge 1 \\
+      H_1:& \;\; \beta < 1 \\ \end{aligned}$$
+    Consider the test procedure $\delta$ that rejects $H_0$ if $X\ge1$.
+    a. Determine the power function of the test.
+    b. Compute the size of the test.
+    
+2. Suppose that the proportion $p$ of defective items in a large population of items is unknown, and that it is desired to test the following hypotheses:
+    $$\begin{aligned}
+    H_0: & \;\; p = 0.2 \\
+    H_1: & \;\; p \ne 0.2 \end{aligned}$$
+    Suppose that a random sample of $n=20$ items is drawn from the population and let $Y$ deonte the number of defective items observed. Consider a test procedure $\delta$ such that we will fail to reject $H_0$ if $Y \in \{2,3,\dots,6\}$. 
+    a. Determine the value of the power function $\pi(p|\delta)$ at the points $p=\{0,0.1,\dots,0.9, 1\}$. Sketch the power function.
+    b. Determine the size of the test.
+    
+3. Suppose that $X_1, \dots, X_n \stackrel{iid}{\sim} N(\mu, 1)$. Suppose that $\mu_0$ is some specified number and that we are interested in testing:
+    $$\begin{aligned}
+    H_0: & \;\; \mu = \mu_0\\
+    H_1: & \;\; \mu \ne \mu_0 \end{aligned}$$
+    Finally, suppose that $n=25$ and consider a test procedure that will reject $H_0$ if $\left| \bar{X}_n -\mu_0 \right|\ge c$ for some value of $c$. Determine the value of $c$ such that the size of the test is $0.05$.
+
+  

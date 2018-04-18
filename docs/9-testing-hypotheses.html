@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="1-introduction-to-probability.html">
+<link rel="prev" href="8-sampling-distributions-of-estimators.html">
+<link rel="next" href="A-gamma-function.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -209,23 +209,42 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">STA 474 - Mathematical Statistics</h1>
-<h4 class="author"><em>Derek L. Sonderegger</em></h4>
-<h4 class="date"><em>April 17, 2018</em></h4>
-</div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This is a location for distributing homework questions for STA 474, Mathematical Statistics. I am teaching this course out of DeGroot and Schervish, but I want to be able to expand the homework questions. The first four chapters are commonly covered in STA 473, but I included them here in part because I want the chapter numbering scheme to match up with the book’s numbering and also to show how the IBL version of 473 goes.</p>
+<div id="testing-hypotheses" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Testing Hypotheses</h1>
+<div id="problems-of-testing-hypotheses" class="section level2">
+<h2><span class="header-section-number">9.1</span> Problems of Testing Hypotheses</h2>
+<ol style="list-style-type: decimal">
+<li>Let <span class="math inline">\(X\)</span> have the exponential distribution with parameter <span class="math inline">\(\beta\)</span>. Suppose that we wish to test the hypotheses: <span class="math display">\[\begin{aligned} 
+  H_0:&amp; \;\; \beta \ge 1 \\
+  H_1:&amp; \;\; \beta &lt; 1 \\ \end{aligned}\]</span> Consider the test procedure <span class="math inline">\(\delta\)</span> that rejects <span class="math inline">\(H_0\)</span> if <span class="math inline">\(X\ge1\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Determine the power function of the test.</li>
+<li>Compute the size of the test.</li>
+</ol></li>
+<li>Suppose that the proportion <span class="math inline">\(p\)</span> of defective items in a large population of items is unknown, and that it is desired to test the following hypotheses: <span class="math display">\[\begin{aligned}
+H_0: &amp; \;\; p = 0.2 \\
+H_1: &amp; \;\; p \ne 0.2 \end{aligned}\]</span> Suppose that a random sample of <span class="math inline">\(n=20\)</span> items is drawn from the population and let <span class="math inline">\(Y\)</span> deonte the number of defective items observed. Consider a test procedure <span class="math inline">\(\delta\)</span> such that we will fail to reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(Y \in \{2,3,\dots,6\}\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li>Determine the value of the power function <span class="math inline">\(\pi(p|\delta)\)</span> at the points <span class="math inline">\(p=\{0,0.1,\dots,0.9, 1\}\)</span>. Sketch the power function.</li>
+<li>Determine the size of the test.</li>
+</ol></li>
+<li>Suppose that <span class="math inline">\(X_1, \dots, X_n \stackrel{iid}{\sim} N(\mu, 1)\)</span>. Suppose that <span class="math inline">\(\mu_0\)</span> is some specified number and that we are interested in testing: <span class="math display">\[\begin{aligned}
+H_0: &amp; \;\; \mu = \mu_0\\
+H_1: &amp; \;\; \mu \ne \mu_0 \end{aligned}\]</span> Finally, suppose that <span class="math inline">\(n=25\)</span> and consider a test procedure that will reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(\left| \bar{X}_n -\mu_0 \right|\ge c\)</span> for some value of <span class="math inline">\(c\)</span>. Determine the value of <span class="math inline">\(c\)</span> such that the size of the test is <span class="math inline">\(0.05\)</span>.</li>
+</ol>
 
 </div>
+</div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="1-introduction-to-probability.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="8-sampling-distributions-of-estimators.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="A-gamma-function.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -255,7 +274,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/edit/master/474/index.Rmd",
+"link": "https://github.com/dereksonderegger/edit/master/474/09_Testing_Hypotheses.Rmd",
 "text": "Edit"
 },
 "download": [["Probability.pdf", "PDF"], ["Probability.epub", "EPUB"]],

@@ -19,7 +19,7 @@ Find the value of $c$ such that $cY$ has a Chi-squared distribution.
 Nothing here.
 
 ## t-distribution
-1. Suppose that $X_1, \dots , X_n$ form a random sample from the normal distribution with unknown mean $\mu$ and unknown standard deviation $\sigma^2$, and let $\hat\mu$ and $\hat\sigma^2$ denote the M.L.E.'s of $\mu$ and $\sigma^2$. For the sample size $n = 17$, find a value of $k$ such that
+1. Suppose that $X_1, \dots , X_n$ form a random sample from the normal distribution with unknown mean $\mu$ and unknown variance $\sigma^2$, and let $\hat\mu$ and $\hat\sigma^2$ denote the M.L.E.'s of $\mu$ and $\sigma^2$. For the sample size $n = 17$, find a value of $k$ such that
 $$Pr(\hat\mu > \mu +k\hat \sigma ) =0.95$$.
 
 2. Suppose that $Z_1, \dots , Z_5$ form a random sample from the standard normal distribution. Let 
