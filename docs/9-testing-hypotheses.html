@@ -25,7 +25,7 @@
 <meta name="author" content="Derek L. Sonderegger">
 
 
-<meta name="date" content="2018-04-17">
+<meta name="date" content="2018-05-02">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -182,6 +182,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="9" data-path="9-testing-hypotheses.html"><a href="9-testing-hypotheses.html"><i class="fa fa-check"></i><b>9</b> Testing Hypotheses</a><ul>
 <li class="chapter" data-level="9.1" data-path="9-testing-hypotheses.html"><a href="9-testing-hypotheses.html#problems-of-testing-hypotheses"><i class="fa fa-check"></i><b>9.1</b> Problems of Testing Hypotheses</a></li>
+<li class="chapter" data-level="9.2" data-path="9-testing-hypotheses.html"><a href="9-testing-hypotheses.html#simple-hypotheses"><i class="fa fa-check"></i><b>9.2</b> Simple Hypotheses</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-gamma-function.html"><a href="A-gamma-function.html"><i class="fa fa-check"></i><b>A</b> Gamma Function</a></li>
@@ -223,7 +224,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ol></li>
 <li>Suppose that the proportion <span class="math inline">\(p\)</span> of defective items in a large population of items is unknown, and that it is desired to test the following hypotheses: <span class="math display">\[\begin{aligned}
 H_0: &amp; \;\; p = 0.2 \\
-H_1: &amp; \;\; p \ne 0.2 \end{aligned}\]</span> Suppose that a random sample of <span class="math inline">\(n=20\)</span> items is drawn from the population and let <span class="math inline">\(Y\)</span> deonte the number of defective items observed. Consider a test procedure <span class="math inline">\(\delta\)</span> such that we will fail to reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(Y \in \{2,3,\dots,6\}\)</span>.
+H_1: &amp; \;\; p \ne 0.2 \end{aligned}\]</span> Suppose that a random sample of <span class="math inline">\(n=20\)</span> items is drawn from the population and let <span class="math inline">\(Y\)</span> denote the number of defective items observed. Consider a test procedure <span class="math inline">\(\delta\)</span> such that we will fail to reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(Y \in \{2,3,\dots,6\}\)</span>.
 <ol style="list-style-type: lower-alpha">
 <li>Determine the value of the power function <span class="math inline">\(\pi(p|\delta)\)</span> at the points <span class="math inline">\(p=\{0,0.1,\dots,0.9, 1\}\)</span>. Sketch the power function.</li>
 <li>Determine the size of the test.</li>
@@ -231,6 +232,20 @@ H_1: &amp; \;\; p \ne 0.2 \end{aligned}\]</span> Suppose that a random sample of
 <li>Suppose that <span class="math inline">\(X_1, \dots, X_n \stackrel{iid}{\sim} N(\mu, 1)\)</span>. Suppose that <span class="math inline">\(\mu_0\)</span> is some specified number and that we are interested in testing: <span class="math display">\[\begin{aligned}
 H_0: &amp; \;\; \mu = \mu_0\\
 H_1: &amp; \;\; \mu \ne \mu_0 \end{aligned}\]</span> Finally, suppose that <span class="math inline">\(n=25\)</span> and consider a test procedure that will reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(\left| \bar{X}_n -\mu_0 \right|\ge c\)</span> for some value of <span class="math inline">\(c\)</span>. Determine the value of <span class="math inline">\(c\)</span> such that the size of the test is <span class="math inline">\(0.05\)</span>.</li>
+</ol>
+</div>
+<div id="simple-hypotheses" class="section level2">
+<h2><span class="header-section-number">9.2</span> Simple Hypotheses</h2>
+<ol style="list-style-type: decimal">
+<li><p>Suppose that <span class="math inline">\(X_1, \dots, X_n \stackrel{iid}{\sim} \textrm{Poisson}(\lambda)\)</span> and we are interested in testing <span class="math display">\[\begin{aligned}
+H_0: &amp; \;\; \lambda = \lambda_0 \\
+H_1: &amp; \;\; \lambda = \lambda_1 \end{aligned}\]</span> where <span class="math inline">\(0 &lt; \lambda_0 &lt; \lambda_1\)</span>. Show that the Likelihood Ratio Test procedure reduces to the decision rule to reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(\bar{X}&gt;c\)</span> for some constant <span class="math inline">\(c\)</span>.</p></li>
+<li><p>Suppose that <span class="math inline">\(X_1, \dots, X_n \stackrel{iid}{\sim} \textrm{Bernoulli}(p)\)</span>. Let <span class="math inline">\(0 &lt; p_0 &lt; p_1 &lt; 1\)</span> and we are interested in testing <span class="math display">\[\begin{aligned}
+H_0: &amp; \;\; p = p_0 \\
+H_1: &amp; \;\; p = p_1 \end{aligned}\]</span> Show that the Likelihood Ratio Test procedure reduces to the decision rule to reject <span class="math inline">\(H_0\)</span> if the sample proportion <span class="math inline">\(\hat{p}\)</span> is such that <span class="math inline">\(\hat{p} &gt; c\)</span> for some constant <span class="math inline">\(c\)</span>.</p></li>
+<li><p>Suppose that <span class="math inline">\(X_1, \dots, X_n \stackrel{iid}{\sim} \textrm{Exponential}(\beta)\)</span>. Let <span class="math inline">\(0 &lt; \beta_1 &lt; \beta_0\)</span> and we are interested in testing <span class="math display">\[\begin{aligned}
+H_0: &amp; \;\; \beta = \beta_0 \\
+H_1: &amp; \;\; \beta = \beta_1 \end{aligned}\]</span> Show that the Likelihood Ratio Test procedure reduces to the decision rule to reject <span class="math inline">\(H_0\)</span> if the sample mean <span class="math inline">\(\bar{X}\)</span> is such that <span class="math inline">\(\bar{X} &gt; c\)</span> for some constant <span class="math inline">\(c\)</span>.</p></li>
 </ol>
 
 </div>
