@@ -3,7 +3,7 @@
 
 ## Problems of Testing Hypotheses
 
-1.  Let $X$ have the exponential distribution with parameter $\beta$.     Suppose that we wish to test the hypotheses:
+1.  Let $X$ have the exponential distribution with parameter $\beta$. Suppose that we wish to test the hypotheses:
     $$\begin{aligned} 
       H_0:& \;\; \beta \ge 1 \\
       H_1:& \;\; \beta < 1 \\ \end{aligned}$$
